@@ -5,7 +5,8 @@
 [heroku]: https://studytwo.herokuapp.com/
 
 ## Minimum Viable Product
-StudyTwo is a clone of StudyBlue with two types of users, students and tutors, built on Rails and Backbone. :
+StudyTwo is a clone of StudyBlue with personal tutoring
+built on Rails and Backbone. :
 
 <!-- This is a Markdown checklist. Use it to keep track of your progress! -->
 Both students and tutors can:
@@ -16,12 +17,12 @@ Both students and tutors can:
 - [ ] Group flashcards by topic/tag
 - [ ] View activity history of students
 
-Students can: 
+Students can:
 - [ ] Join a study group
 - [ ] Study flashcards
 - [ ] Take quizzes
 - [ ] View their stats on flashcards and quizzes.
-- [ ] Earn badges and points for doing consistent work. 
+- [ ] Earn badges and points for doing consistent work.
 
 Tutors can:
 - [ ] Create a study group and invite students to join.
@@ -77,7 +78,7 @@ dashboard they will be able notified of the things they need to work on. When a 
 finishes a study session they will be shown the stats for that session. Stats for a
 flashcard session will be a bar graph thats show the distribution of their answers, how
 long they have been studying and the number of consecutive days they have studied. Tutors
-will also be able to see the stats of each student. 
+will also be able to see the stats of each student.
 
 
 [Details][phase-three]
@@ -92,7 +93,7 @@ to students. A quiz can have a time limit. When a student visits their dashboard
 be able to see if they have any quizzes assigned, how many questions the quiz has and how
 long they have to take it. Once they've taken it they will see be shown the number right
 and the number wrong. The tutor will be able to see each students stats on each quiz
-they've taken. 
+they've taken.
 
 [Details][phase-four]
 
@@ -105,12 +106,12 @@ badges and or points for being consistent and disciplined in the work.
 
 ### Bonus Features (TBD)
 - [ ] Study sessions with tutor and one or more students over webRTC with a shared whiteboard.
-- [ ] Students can take a quiz during a study session. 
-- [ ] Ability to drag in quiz problems that students got wrong from past quizzes during study session. 
+- [ ] Students can take a quiz during a study session.
+- [ ] Ability to drag in quiz problems that students got wrong from past quizzes during study session.
 - [ ] Ability to create multiple choice flashcards.
 - [ ] Ability to add audio when creating flashcards.
 - [ ] Ability to draw on flashcards and quiz questions when creating them via canvas.
- 
+
 
 
 [phase-one]: ./docs/phases/phase1.md
@@ -118,4 +119,3 @@ badges and or points for being consistent and disciplined in the work.
 [phase-three]: ./docs/phases/phase3.md
 [phase-four]: ./docs/phases/phase4.md
 [phase-five]: ./docs/phases/phase5.md
-
