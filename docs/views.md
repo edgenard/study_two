@@ -1,26 +1,31 @@
 # View Wireframes
 
+## Landing Page
+![land-papge]
+
 ## New Session
-![new-session]
+![neew-session]
 
-## Feed Show (landing page)
-![feed-show]
+## New User Sign up 
+![new-user]
 
-## Blog Show
-![blog-show]
+## Edit User
+![edit-user]
 
-## Post Show
-![post-show]
+## Delete Account - modal/popup
+![delete-user]
 
-## Post Form
-![post-form]
+## Student Dashboard
+![student-dashboard]
 
 ## Search Results
 ![search-results]
 
-[new-session]: ./wireframes/new_session.png
-[feed-show]: ./wireframes/feed_show.png
-[blog-show]: ./wireframes/blog_show.png
-[post-show]: ./wireframes/post_show.png
-[post-form]: ./wireframes/post_form.png
-[search-results]: ./wireframes/search_results.png
+
+[landing-page]: ./wireframes/landing_page.png
+[new-session]: ./wireframes/login_page.png
+[new-user]: ./wireframes/new_user_sign_up.png
+[edit-user]: ./wireframes/edit_user.png
+[delete-user]: ./wireframes/delete_account_confirmation.png
+[student-dashboard]: ./wireframes/student_dashboard.png
+
