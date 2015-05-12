@@ -22,7 +22,9 @@ Users can:
 * [View Wireframes][views] __Unfinished__
 __Must Redo mockups for:__
 - [ ] landing page
-
+- [ ] new_user
+- [ ] new_session
+- [ ] user_profile
 * [DB schema][schema] __Unfinished__
 
 [views]: ./docs/views.md
@@ -97,6 +99,7 @@ badges and or points for being consistent and disciplined in the work.
 
 ### Bonus Features (TBD)
 - [ ] Add page explaining spaced repetition. Link to it from footer.
+- [ ] Add static pages, About and Contact
 - [ ] Study sessions with tutor and one or more students over webRTC with a shared whiteboard.
 - [ ] Students can take a quiz during a study session.
 - [ ] Ability to drag in quiz problems that students got wrong from past quizzes during study session.
