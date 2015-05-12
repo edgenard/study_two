@@ -5,30 +5,18 @@
 [heroku]: https://studytwo.herokuapp.com/
 
 ## Minimum Viable Product
-StudyTwo is a clone of StudyBlue with personal tutoring
-built on Rails and Backbone. :
+StudyTwo is a clone of StudyBlue built on Rails and Backbone. :
 
 <!-- This is a Markdown checklist. Use it to keep track of your progress! -->
-Both students and tutors can:
+Users can:
 - [ ] Create accounts
 - [ ] Create sessions (log in)
 - [ ] Create decks of flashcards.
 - [ ] View and Edit flashcards.
-- [ ] Group flashcards by topic/tag
-- [ ] View activity history of students
-
-Students can:
-- [ ] Join a study group
 - [ ] Study flashcards
-- [ ] Take quizzes
-- [ ] View their stats on flashcards and quizzes.
-- [ ] Earn badges and points for doing consistent work.
+- [ ] See their stats on each flashcard and on each deck 
 
-Tutors can:
-- [ ] Create a study group and invite students to join.
-- [ ] Create  and edit quizzes based on flashcards.
-- [ ] Assign work to students(flashcards and quizzes)
-- [ ] View the stats of each students in their study group.
+
 
 ## Design Docs
 * [View Wireframes][views] __Unfinished__
@@ -41,12 +29,12 @@ Tutors can:
 
 ### Phase 1: User Authentication and dashboard (~1 day)
 I will implement user authentication in Rails based on the practices learned at
-App Academy. By the end of this phase both students and tutors will be able to sign up,
-sign in and sign out. I will also add the ability for users to destroy their accounts. I
-will also be setting the associations between students, tutors and study groups. Once a
-user has created an account they will be redirected to their dashboard which is were the
-Backbone app will be initialized. I will then push the app to Heroku to get a
-live version to make sure all of the user authentication is working.
+App Academy. By the end of this phase students will be able to sign up,
+sign in, sign out and destroy their accounts. I will also add the ability for users to
+destroy their accounts. I will also be setting the associations between students, tutors
+and study groups. Once a user has created an account they will be redirected to their
+dashboard which is were the Backbone app will be initialized. I will then push the app to
+Heroku to get a live version to make sure all of the user authentication is working.
 
 [Details][phase-one]
 
