@@ -1,0 +1,22 @@
+<header class="header">
+  <h1>StudyTwo</h1>
+  <% if logged_in? %>
+    <a class="user-dashboard-link" href="<%= user_url(current_user) %>" >
+      <%= current_user.email %>
+    </a> |
+    <a href="<%= user_edit_url(current_user) %>" class="user-profile-link">
+      Profile
+    </a>|
+    <form class= "logout-button" action="<%= session_url(current_user) %>" method="post">
+      <input type="hidden" name="authenticity_token" value="<%=form_authenticity_token%>">
+      <input type="hidden" name="_method" value="delete">
+      <button type="submit" name="button">Logout</button>
+    </form>
+  <% else %>
+    <a href="<%= new_session_url %>" class="sign-in-link">
+      Log In
+    </a> |
+    <a href="<%= new_user_url %>"> Sign Up</a>
+  
+  <% end %>
+</header>

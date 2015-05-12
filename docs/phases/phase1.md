@@ -14,8 +14,8 @@
 
 
 ### Views
-- [ ] root/welcome.html.erb
-- [ ] layouts/\_header.html.erb
+- [x] root/welcome.html.erb
+- [x] layouts/\_header.html.erb
 - [ ] layouts/\_footer.html.erb 
 - [ ] users/new.html.erb (Flash messages for invalid input)
 - [ ] users/edit.html.erb
@@ -42,7 +42,7 @@
 
 ## Miscellaneous
 - [ ] Basic layout for each page in css. 
-- [ ] Email Validation
+- [ ] Email Validation - gem 'valid_email'
 - [ ] ActionMailer to send registration emails. 
 
  

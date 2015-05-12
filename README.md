@@ -20,6 +20,9 @@ Users can:
 
 ## Design Docs
 * [View Wireframes][views] __Unfinished__
+__Must Redo mockups for:__
+- [ ] landing page
+
 * [DB schema][schema] __Unfinished__
 
 [views]: ./docs/views.md
