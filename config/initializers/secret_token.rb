@@ -9,4 +9,4 @@
 
 # Make sure your secret_key_base is kept private
 # if you're sharing your code publicly.
-StudyBlueClone::Application.config.secret_key_base = 'b9070ada501b48723d868f1d6e6a93755858b4da84e97cf20f1da86153ba7c521ecbfc2c47966913b0d543aa91c74620a1e2ec261de9ec93a2b9320c77cf0c26'
+StudyTwo::Application.config.secret_key_base = 'b9070ada501b48723d868f1d6e6a93755858b4da84e97cf20f1da86153ba7c521ecbfc2c47966913b0d543aa91c74620a1e2ec261de9ec93a2b9320c77cf0c26'

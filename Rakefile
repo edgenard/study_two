@@ -3,4 +3,4 @@
 
 require File.expand_path('../config/application', __FILE__)
 
-StudyBlueClone::Application.load_tasks
+StudyTwo::Application.load_tasks

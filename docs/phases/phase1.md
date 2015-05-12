@@ -2,21 +2,28 @@
 
 ## Rails
 ### Models
-* User - (email, password, session_token)
+- [x] User - (email, password_digest, session_token)
+  
   
 
 
 ### Controllers
-* UsersController (create, new, destroy, update)
-* SessionsController (create, new, destroy)
+- [ ] UsersController (create, new, destroy, edit, update)
+- [ ] SessionsController (create, new, destroy)
+- [ ] RootController( root )
 
 
 ### Views
-* root/landing_page.html.erb
-* users/new.html.erb
-* users/edit.html.erb
-* users/show.html.erb (dashboard - Backbone app initialized)
-* session/new.html.erb
+- [ ] root/landing_page.html.erb
+- [ ] users/new.html.erb (Flash messages for invalid input)
+- [ ] users/edit.html.erb
+- [ ] users/show.html.erb (dashboard - Backbone app initialized)
+- [ ] session/new.html.erb
+
+### Routes
+- [ ] root Root#root
+- [ ] users 
+- [ ] session
 
 ## Backbone
 ### Models
@@ -32,4 +39,8 @@
 ## Gems/Libraries
 
 ## Miscellaneous
-* Basic layout for each page in css. 
+- [ ] Basic layout for each page in css. 
+- [ ] Email Validation
+- [ ] ActionMailer to send registration emails. 
+
+ 
