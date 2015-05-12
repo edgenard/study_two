@@ -10,11 +10,13 @@
 ### Controllers
 - [x] UsersController (create, new, destroy, edit, update)
 - [x] SessionsController (create, new, destroy)
-- [ ] RootController( root )
+- [x] RootController( root )
 
 
 ### Views
-- [ ] root/landing_page.html.erb
+- [ ] root/welcome.html.erb
+- [ ] layouts/\_header.html.erb
+- [ ] layouts/\_footer.html.erb 
 - [ ] users/new.html.erb (Flash messages for invalid input)
 - [ ] users/edit.html.erb
 - [ ] users/show.html.erb (dashboard - Backbone app initialized)

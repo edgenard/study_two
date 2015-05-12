@@ -93,6 +93,7 @@ badges and or points for being consistent and disciplined in the work.
 [Details][phase-five]
 
 ### Bonus Features (TBD)
+- [ ] Add page explaining spaced repetition. Link to it from footer.
 - [ ] Study sessions with tutor and one or more students over webRTC with a shared whiteboard.
 - [ ] Students can take a quiz during a study session.
 - [ ] Ability to drag in quiz problems that students got wrong from past quizzes during study session.
