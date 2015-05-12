@@ -3,12 +3,14 @@
 ## Rails
 ### Models with associations
 * Deck (title, description, user_id)
-  * A deck can belong to many users. 
-* 
+  * A deck can belong to many users.
+* UsersDeck(deck_id, user_id)
+  *
 
 ### Controllers
 Api::StudyGroupsController (create, destroy, index, show)
-Api::PostsController (create, destroy, show, update)
+Api::DeckController (create, destroy, show, update)
+Api::FlashCardController ()
 
 ### Views
 * blogs/show.json.jbuilder
