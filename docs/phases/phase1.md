@@ -16,7 +16,7 @@
 ### Views
 - [x] root/welcome.html.erb
 - [x] layouts/\_header.html.erb
-- [ ] layouts/\_footer.html.erb 
+- [x] layouts/\_footer.html.erb 
 - [ ] users/new.html.erb (Flash messages for invalid input)
 - [ ] users/edit.html.erb
 - [ ] users/show.html.erb (dashboard - Backbone app initialized)

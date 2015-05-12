@@ -1,0 +1,23 @@
+
+<% if current_user %>
+  <% button_text = "Save Update" %>
+<% else %>
+  <% button_text = "Get your space" %>
+<% end %>
+
+<section class="user-form">
+  <form  action="<%= users_url %>" method="post">
+    <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+    <label for="user_email" class="form-field">Email:
+      <input type="text" name="user[email]" value="<%= current_user && current_user.email%>">
+    </label>
+    <label for="user_password" class="form-field">Password: (6 characters minimum)
+      <input type="password" name="user[password]" value="">
+    </label>
+    
+    <input type="submit" name="" value="<%= button_text %>">
+    
+    
+  </form>
+  
+</section>
