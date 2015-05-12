@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-  
+  before_action :require_login, only: [:edit, :update, :destroy]
   
   def create
     @user = User.new(user_params)
@@ -37,12 +37,21 @@ class UsersController < ApplicationController
   
   def destroy
     @user = current_user
-    
+    @user.destroy
+    flash[:notice] = "Goodbye!"
+    redirect_to root_url
   end
   
   private 
   def user_params
     params.require(:user).permit(:email, :password)
+  end
+  
+  def require_login
+    unless logged_in?
+      flash[:notice] = "You must be logged into do this!"
+      redirect_to new_sessions_url
+    end
   end
   
 end

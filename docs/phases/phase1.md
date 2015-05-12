@@ -8,8 +8,8 @@
 
 
 ### Controllers
-- [ ] UsersController (create, new, destroy, edit, update)
-- [ ] SessionsController (create, new, destroy)
+- [x] UsersController (create, new, destroy, edit, update)
+- [x] SessionsController (create, new, destroy)
 - [ ] RootController( root )
 
 
