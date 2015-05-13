@@ -34,7 +34,7 @@ class UsersController < ApplicationController
     @user = current_user
     if @user.update(user_params)
       flash.now[:notice] = "Successfuly Saved"
-      render :edit
+      redirect_to edit_user_url(@user)
     else
       flash.now[:errors] = @user.errors.full_messages
       render :edit

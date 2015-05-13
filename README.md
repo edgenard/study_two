@@ -9,10 +9,11 @@ StudyTwo is a clone of StudyBlue built on Rails and Backbone. :
 
 <!-- This is a Markdown checklist. Use it to keep track of your progress! -->
 Users can:
-- [ ] Create accounts
-- [ ] Delete accounts
-- [ ] Create sessions (log in)
-- [ ] Delete sessions(log out)
+- [x] Create accounts
+- [x] Delete accounts
+- [ ] Edit account information
+- [x] Create sessions (log in)
+- [x] Delete sessions(log out)
 - [ ] Create decks of flashcards.
 - [ ] View and Edit flashcards.
 - [ ] Study flashcards
@@ -24,13 +25,14 @@ Users can:
 * [View Wireframes][views] __Unfinished__
 
 __Must Redo mockups for:__
-- [ ] landing page
-- [ ] new_user
-- [ ] new_session
-- [ ] user_profile
-
+- [ ] Change student dashboard to learner dashboard
+- [ ] Deck creation form view
+- [ ] Flashcard creation form view
 
 * [DB schema][schema] __Unfinished__
+- [ ] User db schema
+- [ ] Deck db schema
+- [ ] Flashcard db schema
 
 [views]: ./docs/views.md
 [schema]: ./docs/schema.md
@@ -49,19 +51,11 @@ Heroku to get a live version to make sure all of the user authentication is work
 [Details][phase-one]
 
 ### Phase 2: Starting Backbone with Deck and FlashCard creation   (~2 days)
-I will add API routes that send and receive JSON data to allow tutors
-to create a study group and invite students to join, remove students from the study group.
-Students will be able to see that they have been invited to join a study group and decide
-to accept or reject the invitation. If a student joins a study group it will show up on
-their dashboard under the list of their study groups.
-
 I will set up the deck model and flashcard model and the appropriate associations to
-students or tutors. I will add API routes to allow students and teachers to create decks
+users. I will add API routes to allow students and teachers to create decks
 of flashcard with with a rich text editor thanks to the
 [jWYSISWYG][https://github.com/akzhan/jwysiwyg]. They will also be able to see the decks
-of flashcards they have created on their dashboard. Tutors will be able to assign
-flashcards to students.Students will see their assigned flashcards when they visit their
-dashboard.
+of flashcards they have created on their dashboard. And to edit deck details and flashcard details.
 
 __Details unfinihshed__
 [Details][phase-two]

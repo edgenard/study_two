@@ -16,7 +16,7 @@
 ![delete-user]
 
 ## Student Dashboard
-![student-dashboard]
+![learner-dashboard]
 
 ## Search Results
 ![search-results]
@@ -27,5 +27,5 @@
 [new-user]: ./wireframes/new_user_sign_up.png
 [edit-user]: ./wireframes/edit_user.png
 [delete-user]: ./wireframes/delete_account_confirmation.png
-[student-dashboard]: ./wireframes/student_dashboard.png
+[learner-dashboard]: ./wireframes/learner_dashboard.png
 
