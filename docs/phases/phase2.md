@@ -2,7 +2,7 @@
 
 ## Rails
 ### Models with associations
-- [ ] Deck (title, description, user_id)
+- [x] Deck (title, description, user_id)
    * A deck belongs to a user
    * A deck has many flashcards.
 - [ ] Card (deck_id, front, back, score)
@@ -10,7 +10,7 @@
     
 
 ### Controllers
-- [ ] Api::DeckController (create, destroy, show, update, index, new)
+- [ ] Api::DeckController (~~create~~, destroy, update, ~~index~~)
 - [ ] Api::FlashCardController (create, destroy, show, update)
 
 ### Views
@@ -28,6 +28,9 @@
 ### Collections
 - [ ] Decks(used to make dashboard view)
 - [ ] Cards
+
+### Routers
+- [ ] app Router
 
 ### Views
 - [ ] StudyDeck(user_show page )

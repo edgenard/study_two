@@ -23,7 +23,8 @@ class Api::DecksController < ApplicationController
   end
   
   def index
-    
+    @decks = current_user.decks
+    render "index" 
   end
   
   def new

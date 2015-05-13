@@ -6,7 +6,7 @@ StudyTwo::Application.routes.draw do
  
  resources :sessions
  
- namespace :api,  default: { format: :json} do
+ namespace :api,  defaults: { format: :json} do
    resources :decks, only: [ :create, :destroy, :index, :show, :update]
    
  end
