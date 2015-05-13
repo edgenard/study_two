@@ -2,35 +2,40 @@
 
 ## Rails
 ### Models with associations
-* Deck (title, description, user_id)
-  * A deck can belong to many users.
-* UsersDeck(deck_id, user_id)
-  *
+- [ ] Deck (title, description, user_id)
+   * A deck belongs to a user
+   * A deck has many flashcards.
+- [ ] Card (deck_id, front, back, score)
+  * A flashcard belongs to a deck.
+    
 
 ### Controllers
-Api::StudyGroupsController (create, destroy, index, show)
-Api::DeckController (create, destroy, show, update)
-Api::FlashCardController ()
+- [ ] Api::DeckController (create, destroy, show, update, index, new)
+- [ ] Api::FlashCardController (create, destroy, show, update)
 
 ### Views
-* blogs/show.json.jbuilder
+- [ ] api/decks/index.json.jbuilder
+- [ ] api/decks/\_deck.json.jbuilder
+- [ ] api/decks/\_cards.json.jbuilder
+- [ ] api/decks/\_card.json.builder
 
 ## Backbone
 ### Models
-* Blog (parses nested `posts` association)
-* Post
-* student.js (parses nested study groups association)
-* tutor.js (parses nested study groups association, creates )
+- [ ] Deck ( parses flashcards as cards)
+- [ ] Card
+
 
 ### Collections
-* Blogs
-* Posts
+- [ ] Decks(used to make dashboard view)
+- [ ] Cards
 
 ### Views
-* BlogForm
-* BlogShow (composite view, contains PostsIndex subview)
-* PostsIndex (composite view, contains PostsIndexItem subviews)
-* PostsIndexItem
-* PostShow
+- [ ] StudyDeck(user_show page )
+  * has two templates: users with decks, users without decks
+- [ ] DeckForm(to create or edit decks)
+- [ ] CardForm(to create or edit cards)
+- [ ] DeckShow (Shows deck details and lists cards)
+- [ ] CardsIndex( Subview of DeckShow)
 
 ## Gems/Libraries
+* [jWYSISWYG][https://github.com/akzhan/jwysiwyg] to allow rich text editing in inputs 

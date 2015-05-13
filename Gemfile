@@ -13,6 +13,8 @@ gem 'bcrypt'
 
 gem 'unicorn'
 
+gem 'backbone-on-rails'
+
 group :production do
   gem 'rails_12factor'
 end

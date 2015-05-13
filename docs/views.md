@@ -15,11 +15,11 @@
 ## Delete Account - modal/popup
 ![delete-user]
 
-## Student Dashboard
-![learner-dashboard]
+## User Dashboard
+![new-user-dashboard]
+![User-dashboard]
 
-## Search Results
-![search-results]
+
 
 
 [landing-page]: ./wireframes/landing_page.png
@@ -27,5 +27,6 @@
 [new-user]: ./wireframes/new_user_sign_up.png
 [edit-user]: ./wireframes/edit_user.png
 [delete-user]: ./wireframes/delete_account_confirmation.png
+[new-user-dashboard]: ./wireframs/new_user_dasboard.png
 [learner-dashboard]: ./wireframes/learner_dashboard.png
 

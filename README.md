@@ -11,7 +11,7 @@ StudyTwo is a clone of StudyBlue built on Rails and Backbone. :
 Users can:
 - [x] Create accounts
 - [x] Delete accounts
-- [ ] Edit account information
+- [x] Edit account information
 - [x] Create sessions (log in)
 - [x] Delete sessions(log out)
 - [ ] Create decks of flashcards.
@@ -24,12 +24,15 @@ Users can:
 ## Design Docs
 * [View Wireframes][views] __Unfinished__
 
-__Must Redo mockups for:__
-- [ ] Change student dashboard to learner dashboard
+__Mockups TODO__
+- [x] Change student dashboard to learner dashboard
+- [x] Make new_user and user dasboard mockups
 - [ ] Deck creation form view
 - [ ] Flashcard creation form view
 
 * [DB schema][schema] __Unfinished__
+
+__Schema TODO__ 
 - [ ] User db schema
 - [ ] Deck db schema
 - [ ] Flashcard db schema

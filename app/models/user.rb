@@ -4,6 +4,8 @@ class User < ActiveRecord::Base
   validates :password, length: { minimum: 6, allow_blank: true }
   validates :email, uniqueness: true
   
+  has_many :decks
+  
   after_initialize :ensure_session_token
   
   def self.generate_token
