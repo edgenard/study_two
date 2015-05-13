@@ -1,12 +1,7 @@
 
-<% if current_user %>
-  <% button_text = "Save Face" %>
-<% else %>
-  <% button_text = "Get Space" %>
-<% end %>
 
 <section class="user-form">
-  <form  action="<%= users_url %>" method="post">
+  <form  action="<%= action_url %>" method="post">
     <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
     <label for="user_email" class="form-field">Email:
       <input type="text" name="user[email]" value="<%= current_user && current_user.email%>">

@@ -5,7 +5,7 @@ class UsersController < ApplicationController
   def create
     @user = User.new(user_params)
     if @user.save
-      login! @user
+      login!(@user)
       flash[:notice] = "Welcome to StudyTwo!"
       redirect_to user_url(@user)
     else
@@ -56,12 +56,12 @@ class UsersController < ApplicationController
   def require_login
     unless logged_in? && right_user
       flash[:notice] = "You must be logged in as the right user do this!"
-      redirect_to new_sessions_url
+      redirect_to new_session_url
     end
   end
   
   def right_user
-    current_user.id === User.find(params[:id])
+    current_user.id == (params[:id]).to_i
   end
   
 end
