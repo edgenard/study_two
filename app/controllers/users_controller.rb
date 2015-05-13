@@ -1,5 +1,6 @@
 class UsersController < ApplicationController
-  before_action :require_login, only: [:edit, :update, :destroy]
+  before_action :require_login, only: [:edit, :update, :destroy, :show]
+  
   
   def create
     @user = User.new(user_params)
@@ -18,9 +19,14 @@ class UsersController < ApplicationController
     render :new
   end
   
+  def show
+    @user = User.find(params[:id])
+    render :show
+  end
+  
   
   def edit
-    @user = current_user
+    @user = User.find(params[:id])
     render :edit
   end
   
@@ -48,10 +54,14 @@ class UsersController < ApplicationController
   end
   
   def require_login
-    unless logged_in?
-      flash[:notice] = "You must be logged into do this!"
+    unless logged_in? && right_user
+      flash[:notice] = "You must be logged in as the right user do this!"
       redirect_to new_sessions_url
     end
+  end
+  
+  def right_user
+    current_user.id === User.find(params[:id])
   end
   
 end

@@ -8,7 +8,7 @@
 
 
 ### Controllers
-- [x] UsersController (create, new, destroy, edit, update)
+- [x] UsersController (create, new, destroy, edit, update, show)
 - [x] SessionsController (create, new, destroy)
 - [x] RootController( root )
 
@@ -17,15 +17,15 @@
 - [x] root/welcome.html.erb
 - [x] layouts/\_header.html.erb
 - [x] layouts/\_footer.html.erb 
-- [ ] users/new.html.erb (Flash messages for invalid input)
-- [ ] users/edit.html.erb
-- [ ] users/show.html.erb (dashboard - Backbone app initialized)
+- [x] users/new.html.erb (Flash messages for invalid input)
+- [x] users/edit.html.erb
+- [x] users/show.html.erb (dashboard - Backbone app starts here)
 - [ ] session/new.html.erb
 
 ### Routes
-- [ ] root Root#root
-- [ ] users 
-- [ ] session
+- [x] root Root#root
+- [x] users 
+- [x] session
 
 ## Backbone
 ### Models

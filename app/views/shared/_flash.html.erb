@@ -1,0 +1,15 @@
+<section class="flash-msg">
+  <ul class="flash-msg-list">
+    <% if flash[:notice] %>
+      <li class="flash-msg-item">
+        <%= flash[:notice] %>
+      </li>
+    <% elsif flash.now  %>
+      <% flash.now.each do |msg| %>
+        <li class="flash-msg-item">
+          <%= msg %>
+        </li>
+      <% end %>
+    <% end %>
+  </ul>
+</section>
