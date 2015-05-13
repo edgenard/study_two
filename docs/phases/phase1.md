@@ -20,7 +20,7 @@
 - [x] users/new.html.erb (Flash messages for invalid input)
 - [x] users/edit.html.erb
 - [x] users/show.html.erb (dashboard - Backbone app starts here)
-- [ ] session/new.html.erb
+- [x] session/new.html.erb
 
 ### Routes
 - [x] root Root#root
