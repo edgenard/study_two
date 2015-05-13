@@ -22,11 +22,14 @@ Users can:
 
 ## Design Docs
 * [View Wireframes][views] __Unfinished__
+
 __Must Redo mockups for:__
 - [ ] landing page
 - [ ] new_user
 - [ ] new_session
 - [ ] user_profile
+
+
 * [DB schema][schema] __Unfinished__
 
 [views]: ./docs/views.md
