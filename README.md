@@ -10,7 +10,9 @@ StudyTwo is a clone of StudyBlue built on Rails and Backbone. :
 <!-- This is a Markdown checklist. Use it to keep track of your progress! -->
 Users can:
 - [ ] Create accounts
+- [ ] Delete accounts
 - [ ] Create sessions (log in)
+- [ ] Delete sessions(log out)
 - [ ] Create decks of flashcards.
 - [ ] View and Edit flashcards.
 - [ ] Study flashcards
@@ -38,12 +40,12 @@ App Academy. By the end of this phase students will be able to sign up,
 sign in, sign out and destroy their accounts. I will also add the ability for users to
 destroy their accounts. I will also be setting the associations between students, tutors
 and study groups. Once a user has created an account they will be redirected to their
-dashboard which is were the Backbone app will be initialized. I will then push the app to
+dashboard which is where the Backbone app will be initialized. I will then push the app to
 Heroku to get a live version to make sure all of the user authentication is working.
 
 [Details][phase-one]
 
-### Phase 2: Study group creation and deck creation   (~2 days)
+### Phase 2: Starting Backbone with Deck and FlashCard creation   (~2 days)
 I will add API routes that send and receive JSON data to allow tutors
 to create a study group and invite students to join, remove students from the study group.
 Students will be able to see that they have been invited to join a study group and decide

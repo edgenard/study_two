@@ -3,3 +3,10 @@
 </section>
 
 <%= render "shared/user_form" %>
+
+
+<form class="delete-account" action="<%= users_url(current_user)%>" method="post">
+  <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+  <input type="hidden" name="_method" value="delete">
+  <button type="submit"> Erase Your Space</button>
+</form>
