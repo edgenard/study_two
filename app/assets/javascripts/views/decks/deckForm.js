@@ -33,10 +33,13 @@ StudyTwo.Views.DeckForm = Backbone.View.extend({
     
     var collection = this.collection;
     
+    var form = this;
+    
     this.model.save(deckData, {
       success: function (deck) {
         collection.add(deck);
       },
+      wait: true,
       error: function (deck, response) {
         alert(response.responseJSON.join());
 

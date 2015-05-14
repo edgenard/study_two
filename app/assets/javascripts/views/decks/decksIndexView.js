@@ -82,7 +82,7 @@ StudyTwo.Views.DecksIndex = Backbone.View.extend({
   
   _getDeck: function (event) {
     var deckId = $(event.currentTarget).data("id");
-    return this.collection.getOrFetch(deckId);
+    return this.collection.get(deckId);
     
   }
   

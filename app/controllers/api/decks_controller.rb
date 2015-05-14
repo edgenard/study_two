@@ -17,7 +17,8 @@ class Api::DecksController < ApplicationController
   end
   
   def show
-    
+    @deck = Deck.find(params[:id])
+    render json: @deck  
   end
   
   def update
