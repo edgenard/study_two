@@ -1,0 +1,22 @@
+<header>
+  <h2> StudyTwo Overview</h2>
+</header>
+<section class="decks">
+  <ul>
+    <% decks.each(function(deck){ %>
+    <li>
+      <%= deck.escape("title") %> |
+      <button class="edit-deck" data-id="<%= deck.escape('id') %>">
+      Edit Deck
+      </button> |
+      <button class="delete-deck" data-id="<%= deck.escape('id') %>">
+        Delete Deck
+      </button>
+    </li>
+    <% }) %>
+  </ul>
+  
+</section>
+<section class="form-space">
+  <button class="new-deck"> New Deck </button>
+</section>

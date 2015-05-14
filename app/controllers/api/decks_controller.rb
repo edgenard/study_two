@@ -11,7 +11,9 @@ class Api::DecksController < ApplicationController
   end
   
   def destroy
-    
+    @deck = Deck.find(params[:id])
+    @deck.destroy
+    render json: @deck
   end
   
   def show
@@ -19,6 +21,12 @@ class Api::DecksController < ApplicationController
   end
   
   def update
+    @deck = Deck.find(params[:id])
+    if @deck.update(deck_params)
+      render json: @deck
+    else
+      render json: @deck.errors, status: :unprocessable_entity
+    end
     
   end
   

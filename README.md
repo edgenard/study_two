@@ -26,16 +26,16 @@ Users can:
 
 __Mockups TODO__
 - [x] Change student dashboard to learner dashboard
-- [x] Make new_user and user dasboard mockups
+- [x] Make new_user and user dashboard mockups
 - [ ] Deck creation form view
 - [ ] Flashcard creation form view
 
 * [DB schema][schema] __Unfinished__
 
 __Schema TODO__ 
-- [ ] User db schema
-- [ ] Deck db schema
-- [ ] Flashcard db schema
+- [x] User db schema
+- [x] Deck db schema
+- [x] Flashcard db schema
 
 [views]: ./docs/views.md
 [schema]: ./docs/schema.md

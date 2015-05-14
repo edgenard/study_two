@@ -4,7 +4,13 @@ window.StudyTwo = {
   Views: {},
   Routers: {},
   initialize: function() {
-    alert('Hello from Backbone!');
+
+    var userDecks = new StudyTwo.Collections.Decks();
+    new StudyTwo.Routers.Router({
+      $rootEl: $("#app"),
+      decks: userDecks,
+    });
+    Backbone.history.start();
   }
 };
 

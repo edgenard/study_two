@@ -10,12 +10,11 @@
     
 
 ### Controllers
-- [ ] Api::DeckController (~~create~~, destroy, update, ~~index~~)
+- [x] Api::DeckController (~~create~~, ~~destroy~~, ~~update~~, ~~index~~)
 - [ ] Api::FlashCardController (create, destroy, show, update)
 
 ### Views
-- [ ] api/decks/index.json.jbuilder
-- [ ] api/decks/\_deck.json.jbuilder
+- [x] api/decks/index.json.jbuilder
 - [ ] api/decks/\_cards.json.jbuilder
 - [ ] api/decks/\_card.json.builder
 
@@ -26,16 +25,16 @@
 
 
 ### Collections
-- [ ] Decks(used to make dashboard view)
+- [x] Decks(used to make dashboard view)
 - [ ] Cards
 
 ### Routers
-- [ ] app Router
+- [x] app Router
 
 ### Views
 - [ ] StudyDeck(user_show page )
   * has two templates: users with decks, users without decks
-- [ ] DeckForm(to create or edit decks)
+- [x] DeckForm(to create or edit decks)
 - [ ] CardForm(to create or edit cards)
 - [ ] DeckShow (Shows deck details and lists cards)
 - [ ] CardsIndex( Subview of DeckShow)
