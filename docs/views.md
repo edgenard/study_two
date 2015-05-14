@@ -16,7 +16,6 @@
 ![delete-user]
 
 ## User Dashboard
-![new-user-dashboard]
 ![User-dashboard]
 
 

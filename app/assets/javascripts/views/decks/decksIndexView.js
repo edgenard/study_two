@@ -20,9 +20,11 @@ StudyTwo.Views.DecksIndex = Backbone.View.extend({
   },
   
   events: {
-    "click .new-deck"    : "newDeck",
-    "click .delete-deck" : "deleteDeck",
-    "click  .edit-deck"  : "editDeck",
+    "click  .new-deck"     : "newDeck",
+    "click  .delete-deck"  : "deleteDeck",
+    "click  .edit-deck"    : "editDeck",
+    "click  .just-close"   : "removeForm",
+
   },
   
   
@@ -34,6 +36,11 @@ StudyTwo.Views.DecksIndex = Backbone.View.extend({
     });
     
     this.$el.find(".form-space").html(deckForm.render().$el);  
+  },
+  
+  removeForm: function (event) {
+    event.preventDefault();
+    this.collection.trigger("sync")
   },
   
   newDeck: function (event) {
@@ -75,7 +82,7 @@ StudyTwo.Views.DecksIndex = Backbone.View.extend({
   
   _getDeck: function (event) {
     var deckId = $(event.currentTarget).data("id");
-    return this.collection.get(deckId);
+    return this.collection.getOrFetch(deckId);
     
   }
   

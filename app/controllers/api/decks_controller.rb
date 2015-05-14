@@ -6,7 +6,7 @@ class Api::DecksController < ApplicationController
     if @deck.save
       render json: @deck
     else
-      render json: @deck.errors, status: :unprocessable_entity
+      render json: @deck.errors.full_messages, status: :unprocessable_entity
     end
   end
   
@@ -25,7 +25,7 @@ class Api::DecksController < ApplicationController
     if @deck.update(deck_params)
       render json: @deck
     else
-      render json: @deck.errors, status: :unprocessable_entity
+      render json: @deck.errors.full_messages, status: :unprocessable_entity
     end
     
   end

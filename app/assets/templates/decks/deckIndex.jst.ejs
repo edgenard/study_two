@@ -6,9 +6,11 @@
     <% decks.each(function(deck){ %>
     <li>
       <%= deck.escape("title") %> |
+      <%= deck.escape("description") %> |
       <button class="edit-deck" data-id="<%= deck.escape('id') %>">
       Edit Deck
       </button> |
+      <button class="add-card" data-deck-id="<%= deck.escape('id') %>" >Add /Edit Cards</button>
       <button class="delete-deck" data-id="<%= deck.escape('id') %>">
         Delete Deck
       </button>

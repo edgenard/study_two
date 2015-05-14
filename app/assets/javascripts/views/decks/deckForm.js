@@ -20,7 +20,8 @@ StudyTwo.Views.DeckForm = Backbone.View.extend({
   },
   
   events: {
-    "click .deck-done" : "saveDeck",
+    "click  .deck-done"     : "saveDeck",
+    "click  .add-card"      : "newCard",
   },
   
   saveDeck: function (event) {
@@ -36,14 +37,19 @@ StudyTwo.Views.DeckForm = Backbone.View.extend({
       success: function (deck) {
         collection.add(deck);
       },
-      error: function (deck) {
-        console.log("Error")
-        console.log(deck);
+      error: function (deck, response) {
+        alert(response.responseJSON.join());
+
       },
       
     });
     
   },
+  
+  newCard: function (event) {
+    event.preventDefault();
+    
+  }
   
   
 })

@@ -20,20 +20,20 @@
 
 ## Backbone
 ### Models
-- [ ] Deck ( parses flashcards as cards)
-- [ ] Card
+- [x] Deck ( parses flashcards as cards)
+- [x] Card
 
 
 ### Collections
 - [x] Decks(used to make dashboard view)
-- [ ] Cards
+- [x] Cards
 
 ### Routers
 - [x] app Router
 
 ### Views
 - [ ] StudyDeck(user_show page )
-  * has two templates: users with decks, users without decks
+  
 - [x] DeckForm(to create or edit decks)
 - [ ] CardForm(to create or edit cards)
 - [ ] DeckShow (Shows deck details and lists cards)
