@@ -7,7 +7,7 @@ StudyTwo.Views.DeckForm = Backbone.View.extend({
   initialize: function (options) {
     this.model = options.model;
     this.collection = options.collection;
-    this.userId = options.useId;
+    this.userId = options.userId;
     this.listenTo(this.model, "sync", this.render);
   },
   
