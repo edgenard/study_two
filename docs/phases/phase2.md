@@ -11,12 +11,11 @@
 
 ### Controllers
 - [x] Api::DeckController (~~create~~, ~~destroy~~, ~~update~~, ~~index~~)
-- [ ] Api::FlashCardController (create, destroy, show, update)
+- [x] Api::FlashCardController (create, destroy, show, update)
 
 ### Views
 - [x] api/decks/index.json.jbuilder
-- [ ] api/decks/\_cards.json.jbuilder
-- [ ] api/decks/\_card.json.builder
+
 
 ## Backbone
 ### Models

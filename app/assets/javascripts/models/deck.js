@@ -12,7 +12,7 @@ StudyTwo.Models.Deck = Backbone.Model.extend({
   
   cards: function () {
     if (!this._cards) {
-      this._card = new StudyTwo.Collections.Cards();
+      this._cards = new StudyTwo.Collections.Cards();
     }
     return this._cards;
   }

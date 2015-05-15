@@ -24,22 +24,43 @@ StudyTwo.Views.DecksIndex = Backbone.View.extend({
     "click  .delete-deck"  : "deleteDeck",
     "click  .edit-deck"    : "editDeck",
     "click  .just-close"   : "removeForm",
+    "click  .add-card"     : "newCard"
 
+  },
+  
+  newCard: function (event) {
+    event.preventDefault();
+    this.deckFormView && this.deckFormView.trigger("click .deck-done");
+    var last_deck = this.collection.at(this.collection.length - 1);
+    var card = new StudyTwo.Models.Card({ deck_id: last_deck.id});
+    this.cardForm(card);
+    
+    
+  },
+  
+  cardForm: function (card) {
+    this.cardFormView = new StudyTwo.Views.CardForm({
+      model: card,
+    });
+    this.deckFormView && this.deckFormView.remove();
+    this.$el.find(".form-space").html(this.cardFormView.render().$el);
   },
   
   
   deckForm : function (deck) {
-    var deckForm = new StudyTwo.Views.DeckForm({
+    this.deckFormView = new StudyTwo.Views.DeckForm({
       model: deck,
       collection: this.collection,
       userId: this.userId
     });
     
-    this.$el.find(".form-space").html(deckForm.render().$el);  
+    this.$el.find(".form-space").html(this.deckFormView.render().$el);  
   },
   
   removeForm: function (event) {
     event.preventDefault();
+    this.deckFormView.remove();
+    this.cardFormView.remove();
     this.collection.trigger("sync")
   },
   
@@ -61,13 +82,9 @@ StudyTwo.Views.DecksIndex = Backbone.View.extend({
   
   deleteDeck: function (event) {
     event.preventDefault();
-    
     if(!confirm("Are you sure?! Deletes are forever!")) return;
-  
     var deck = this._getDeck(event);
-    
     var collection = this.collection;
-    
     deck.destroy({
       success: function (deck) {
         collection.remove(deck);

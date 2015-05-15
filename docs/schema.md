@@ -16,6 +16,7 @@ id          | integer   | not null, primary key
 deck_id     | integer   | not null, foreign key (references deck)
 front       | text      | not null
 back        | text      | not null
+score       | float     | not null
 
 
 

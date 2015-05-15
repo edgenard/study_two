@@ -1,0 +1,16 @@
+
+<label for="card_front">Front:
+  <textarea name="card[front]" rows="8" cols="40" id="card_front">
+    <%= card.escape("front") %>
+  </textarea>
+</label>
+
+<label for="card_back">Back:
+  <textarea name="card[back]" rows="8" cols="40">
+    <%= card.escape("back") %>
+  </textarea>
+</label>
+
+<button class="add-more">Save and Make More</button> |&nbsp
+<button class="card-done">Done making cards</button> |&nbsp
+<button class="study">Study Deck</button>

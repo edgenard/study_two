@@ -8,6 +8,7 @@ StudyTwo::Application.routes.draw do
  
  namespace :api,  defaults: { format: :json} do
    resources :decks, only: [ :create, :destroy, :index, :show, :update]
+   resources :cards, only: [:create, :destroy, :index, :show, :update]
    
  end
 end

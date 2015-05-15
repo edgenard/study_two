@@ -2,7 +2,7 @@ StudyTwo.Views.DeckForm = Backbone.View.extend({
   template: JST['decks/deckForm'],
   
   tagName: "form",
-  className: "deck-form",
+  className: "deck-form ",
   
   initialize: function (options) {
     this.model = options.model;
@@ -21,7 +21,6 @@ StudyTwo.Views.DeckForm = Backbone.View.extend({
   
   events: {
     "click  .deck-done"     : "saveDeck",
-    "click  .add-card"      : "newCard",
   },
   
   saveDeck: function (event) {
@@ -37,6 +36,7 @@ StudyTwo.Views.DeckForm = Backbone.View.extend({
     
     this.model.save(deckData, {
       success: function (deck) {
+        form.remove();
         collection.add(deck);
       },
       wait: true,
@@ -49,10 +49,6 @@ StudyTwo.Views.DeckForm = Backbone.View.extend({
     
   },
   
-  newCard: function (event) {
-    event.preventDefault();
-    
-  }
   
   
 })
