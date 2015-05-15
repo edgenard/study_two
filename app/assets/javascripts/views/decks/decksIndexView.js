@@ -31,16 +31,18 @@ StudyTwo.Views.DecksIndex = Backbone.View.extend({
   newCard: function (event) {
     event.preventDefault();
     this.deckFormView && this.deckFormView.trigger("click .deck-done");
-    var last_deck = this.collection.at(this.collection.length - 1);
-    var card = new StudyTwo.Models.Card({ deck_id: last_deck.id});
-    this.cardForm(card);
+    var deckId = $(event.currentTarget).data("deck-id");
+    var card = new StudyTwo.Models.Card();
+    this.cardForm(card, deckId);
     
     
   },
   
-  cardForm: function (card) {
+  cardForm: function (card, deckId) {
     this.cardFormView = new StudyTwo.Views.CardForm({
       model: card,
+      deckId: deckId,
+      collection: this.collection,
     });
     this.deckFormView && this.deckFormView.remove();
     this.$el.find(".form-space").html(this.cardFormView.render().$el);

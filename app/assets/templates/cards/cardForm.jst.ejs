@@ -4,7 +4,7 @@
     <%= card.escape("front") %>
   </textarea>
 </label>
-
+<input type="hidden" name="card[deck_id]" value="<%=deckId%>">
 <label for="card_back">Back:
   <textarea name="card[back]" rows="8" cols="40">
     <%= card.escape("back") %>

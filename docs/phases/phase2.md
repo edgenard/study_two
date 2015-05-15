@@ -34,7 +34,7 @@
 - [ ] StudyDeck(user_show page )
   
 - [x] DeckForm(to create or edit decks)
-- [ ] CardForm(to create or edit cards)
+- [x] CardForm(to create or edit cards)
 - [ ] DeckShow (Shows deck details and lists cards)
 - [ ] CardsIndex( Subview of DeckShow)
 

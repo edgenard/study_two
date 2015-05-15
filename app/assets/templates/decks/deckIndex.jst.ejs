@@ -14,6 +14,13 @@
       <button class="delete-deck" data-id="<%= deck.escape('id') %>">
         Delete Deck
       </button>
+      <ul>
+        <% deck.cards().each(function(card){%>
+            <li>
+              <%= card.escape("front") %>
+            </li>
+        <% }) %>
+      </ul>
     </li>
     <% }) %>
   </ul>
