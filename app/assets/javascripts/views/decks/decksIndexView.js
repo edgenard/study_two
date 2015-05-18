@@ -61,13 +61,14 @@ StudyTwo.Views.DecksIndex = Backbone.View.extend({
   
   removeForm: function (event) {
     event.preventDefault();
-    this.deckFormView.remove();
-    this.cardFormView.remove();
-    this.collection.trigger("sync")
+    this.deckFormView && this.deckFormView.remove();
+    this.cardFormView && this.cardFormView.remove();
+    this.collection.fetch();
   },
   
   newDeck: function (event) {
     event.preventDefault();
+    this.render();
     var deck = new StudyTwo.Models.Deck();
     this.deckForm(deck);
   },

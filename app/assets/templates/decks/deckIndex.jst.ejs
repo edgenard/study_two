@@ -1,46 +1,57 @@
 
- <section class="study-section">
-   <h1>Study.  Beige.</h1>
-   <ul class="deck-status">
-     <% decks.each(function(deck){ %>
-     <li>
-       <p class="deck-title">
-        <%= deck.escape("title") %>
-       </p>
-       <p class="cards-due">
-        # cards due
-       </p>
-       <a href="#/study/<%=deck.id%>" class="study-deck">Study Now</a>   
-     </li>
-     <% }) %>
-   </ul>
-   <!-- Possible subview here -->
-   <section class="deck-mng">
-     <h2> Deck Management</h2>
-     <ul class="decks-list">
+ <% if (decks.length > 0) { %>
+   <section class="study-section">
+     <h1>Study.  Beige.</h1>
+     <ul class="deck-status">
        <% decks.each(function(deck){ %>
-         <li>
-           <p class="deck-info">
-              <%= deck.escape("title") %>
-           </p>
-           <p class="deck-info">
-             <%= deck.cards().length %> cards
-           </p>
-           
-           <p class="deck-info">
-             Avg Score: #
-           </p>
-           
-           <a href="#decks/<%=deck.id%>" class="edit-deck">Edit Deck</a>
-         </li>
-         
-      <% }) %>
+       <li>
+         <p class="deck-title">
+          <%= deck.escape("title") %>
+         </p>
+         <p class="cards-due">
+          # cards due
+         </p>
+         <a href="#/study/<%=deck.id%>" class="study-deck">Study Now</a>   
+       </li>
+       <% }) %>
      </ul>
+     <!-- Possible subview here -->
+     <section class="deck-mng">
+       <h2> Deck Management</h2>
+       <ul class="decks-list">
+         <% decks.each(function(deck){ %>
+           <li>
+             <p class="deck-info">
+                <%= deck.escape("title") %>
+             </p>
+             <p class="deck-info">
+               <%= deck.cards().length %> cards
+             </p>
+             
+             <p class="deck-info">
+               Avg Score: #
+             </p>
+             
+             <a href="#decks/<%=deck.id%>" class="edit-deck" data-id="<%=deck.id%>">Edit Deck</a>
+           </li>
+           
+        <% }) %>
+       </ul>
+    
    </section>
    
- </section>
- <section class="form-space">
-   <a href="#decks/new" class="new-deck">New Deck</a>
- </section>
+<% }else { %>
+  <section class="study-section new-study-section">
+    <h1> You need a deck to StudyBeige</h1>
+    
+  </section>
+   
+ 
+ 
+<% } %>
 
+</section>
+<section class="form-space">
+  <a href="#decks/new" class="new-deck">New Deck</a>
+</section> 
 
