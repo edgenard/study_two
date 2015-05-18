@@ -35,6 +35,10 @@ class User < ActiveRecord::Base
     self.session_token
   end
   
+  def name
+    self.email.match(/^[^@]*/)[0]
+  end
+  
   private
   def ensure_session_token
     self.session_token ||= self.class.generate_token

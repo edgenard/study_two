@@ -1,0 +1,71 @@
+
+.welcome-message{
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
+  height: 400px;
+  width: 900px;
+  margin: 0 auto;
+  background: #D9CB9E;
+  background-image: url(asset-path('open_notebook.jpg'));
+  background-size: cover;
+}
+
+.welcome-message > h1 {
+  font-size: 72px;
+  color: #2A2C2B;
+  margin: 20px auto;
+}
+
+.welcome-message > h2 {
+  font-size: 36px;
+  background:#2A2C2B;
+  color: #D9CB9E;
+}
+
+.welcome-message > h2 > a {
+  text-decoration: underline;
+}
+.welcome-message > h2 > a:hover {
+  background: #D9CB9E;
+  color: #2A2C2B;
+}
+
+.sign-up-btn {
+  display: block;
+  margin: 20px auto;
+  width: 120px;
+  padding: 10px;
+  border: 1px solid #2A2C2B;
+  font-size: 18px;
+  text-align: center;
+}
+
+.welcome-message > .sign-up-btn{
+  background: #D9CB9E; 
+}
+
+.welcome-message > .sign-up-btn:hover {
+  background: #2A2C2B;
+  color: #D9CB9E;
+}
+
+.flash-copy {
+  display: flex;
+  width: 900px;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+.flash-copy >.sign-up-btn {
+  width: 160px;
+  color:#D9CB9E;
+  background: #2A2C2B; 
+}
+
+.flash-copy > .sign-up-btn:hover {
+  color:  #2A2C2B; 
+  background: #D9CB9E;
+}
+

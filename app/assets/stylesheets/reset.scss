@@ -1,0 +1,29 @@
+
+body, html, h1, h2, h3, header, main, footer, ul, li, table, thead, tbody, tr, td, input, form, label, section, p, a, button, textarea{
+  border: 0;
+  padding: 0;
+  margin: 0;
+  outline: 0;
+  background: transparent;
+  color: inherit;
+  font: inherit;
+  text-align: inherit;
+  text-decoration: none;
+  
+}
+ul {
+  list-style:none;
+}
+
+img {
+  width: 100%;
+}
+
+
+body{
+  background: #fff;
+  font-family: sans-serif;
+  display: flex;
+  flex-direction: column;
+  font-size: 16px;
+}

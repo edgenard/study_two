@@ -8,8 +8,10 @@
 </head>
 <body>
   <%= render "layouts/header" %>
-  <%= render "shared/flash" %>
- <%= yield %>
+  <%= render "shared/flash" if flash%>
+  <%= yield %>
+
+
 
 
  <%= render "layouts/footer" %>

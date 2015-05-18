@@ -5,7 +5,7 @@
 - [x] Deck (title, description, user_id)
    * A deck belongs to a user
    * A deck has many flashcards.
-- [ ] Card (deck_id, front, back, score)
+- [x] Card (deck_id, front, back, score)
   * A flashcard belongs to a deck.
     
 
