@@ -7,6 +7,7 @@ StudyTwo.Views.DecksIndex = Backbone.View.extend({
     this.collection = options.collection;
     this.userId = options.userId;
     this.listenTo(this.collection, "sync add remove change", this.render);
+    this.$formSpace = this.$el.find(".form-space");
   },
   
   
@@ -24,39 +25,9 @@ StudyTwo.Views.DecksIndex = Backbone.View.extend({
     "click  .delete-deck"  : "deleteDeck",
     "click  .edit-deck"    : "editDeck",
     "click  .close-form"   : "removeForm",
-    "click  .add-card"     : "newCard"
+    "click  .add-card"     : "newCard",
+    "click .deck-done"     : "saveDeck",
 
-  },
-  
-  newCard: function (event) {
-    event.preventDefault();
-    this.deckFormView && this.deckFormView.trigger("click .deck-done");
-    var deckId = $(event.currentTarget).data("deck-id");
-    var card = new StudyTwo.Models.Card();
-    this.cardForm(card, deckId);
-    
-    
-  },
-  
-  cardForm: function (card, deckId) {
-    this.cardFormView = new StudyTwo.Views.CardForm({
-      model: card,
-      deckId: deckId,
-      collection: this.collection,
-    });
-    this.deckFormView && this.deckFormView.remove();
-    this.$el.find(".form-space").html(this.cardFormView.render().$el);
-  },
-  
-  
-  deckForm : function (deck) {
-    this.deckFormView = new StudyTwo.Views.DeckForm({
-      model: deck,
-      collection: this.collection,
-      userId: this.userId
-    });
-    
-    this.$el.find(".form-space").html(this.deckFormView.render().$el);  
   },
   
   removeForm: function (event) {
@@ -81,7 +52,33 @@ StudyTwo.Views.DecksIndex = Backbone.View.extend({
     
   },
   
+  deckForm : function (deck) {
+    this.deckFormView = new StudyTwo.Views.DeckForm({
+      model: deck,
+      collection: this.collection,
+      userId: this.userId
+    });
+    debugger;
+    this.$formSpace.html(this.deckFormView.render().$el);  
+  },
 
+  newCard: function (event) {
+    event.preventDefault();
+    this.deckFormView && this.deckFormView.trigger("click .deck-done");
+    var deck = this.deckFormView.model;
+    var card = new StudyTwo.Models.Card();
+    this.cardForm(card, deck);
+      
+  },
+  cardForm: function (card, deck) {
+    this.cardFormView = new StudyTwo.Views.CardForm({
+      model: card,
+      deck: deck,
+      collection: this.collection,
+    });
+    this.deckFormView && this.deckFormView.remove();
+    this.$formSpace.html(this.cardFormView.render().$el);
+  },
   
   deleteDeck: function (event) {
     event.preventDefault();
@@ -102,7 +99,7 @@ StudyTwo.Views.DecksIndex = Backbone.View.extend({
   
   _getDeck: function (event) {
     var deckId = $(event.currentTarget).data("id");
-    return this.collection.get(deckId);
+    return this.collection.get(deckId); //getOrFetch ??
     
   }
   
