@@ -1,12 +1,14 @@
 <section class="form-header">
-  <h1> Re-Face Your Space</h1>
+  <h1> Change your Beige!</h1>
 </section>
 
-<%= render "shared/user_form", action_url: user_url(current_user), button_text: "Save Face" %>
+<%= render "shared/user_form", action_url: user_url(current_user), button_text: "Save Beige" %>
 
-
-<form class="delete-account" action="<%= user_url(current_user)%>" method="post">
-  <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
-  <input type="hidden" name="_method" value="delete">
-  <input type="submit" data-confirm="This is forever! Are you sure?" value="Erase Your Space(delete your account)">
-</form>
+<div class="form-buttons">
+  <form class="delete-account" action="<%= user_url(current_user)%>" method="post">
+    <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+    <input type="hidden" name="_method" value="delete">
+    <button type="submit" > Delete Your Account: Bye Bye Beige <strong>Forever!</strong> </button>
+    
+  </form>
+</div>

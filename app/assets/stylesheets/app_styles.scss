@@ -1,0 +1,147 @@
+.user-home{
+  color: #374140;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  width: 900px;
+  margin: 0 auto;
+
+
+}
+
+
+
+.study-section {
+  padding-top: 20px;
+  display: flex;
+  flex:1;
+  flex-flow: column;
+  border-right: 1px solid #374140
+  
+
+  
+}
+
+.study-section h1{
+  font-size: 36px;
+  margin-bottom: 20px;
+  padding: 0 20px;
+}
+
+.deck-status {
+  width: 400px;
+  margin: 0 auto;
+  display: flex;
+  flex-flow: column;
+}
+
+.deck-status > li {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  border-bottom: 1px solid #374140;
+  align-items:center;
+}
+
+
+
+.deck-title {
+  font-size: 18px;
+  padding: 10px;
+  flex-basis: 30%
+}
+
+.cards-due{
+  display: block;
+  padding: 10px;
+  font-size: 16px;
+  flex-basis: 30%;
+
+  
+}
+
+.study-deck {
+  display: block;
+  border  : 1px solid #374140;
+  padding: 5px;
+  font-size: 12px;
+  text-transform: uppercase;
+
+}
+
+.study-deck:hover {
+  background:#2A2C2B;
+  color: #D9CB9E;
+}
+
+.deck-mng {
+  display: flex;
+  width: 400px;
+  margin: 30px auto;
+  flex-flow: column;
+  font-size: 14px;
+  
+}
+
+.deck-mng h2 {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 10px
+}
+
+.decks-list {
+  border: 1px solid #374140;
+  display: flex;
+  flex-flow: column;
+}
+
+.decks-list li {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  padding: 5px;
+}
+
+.decks-list li p{
+  flex-basis: 25%;
+}
+
+.decks-list li:nth-child(even){
+  background:#D9CB9E;
+}
+
+.edit-deck {
+  display: block;
+  padding: 3px;
+  border: 1px solid #374140;
+  align-self: center;
+}
+
+.edit-deck:hover {
+  background: #2A2C2B;
+  color: #D9CB9E;
+}
+
+.form-space {
+ padding-top: 20px;
+ display: flex;
+ flex-flow: column;
+ flex: 1;
+ padding: 10px;
+ justify-content: center;
+
+}
+
+.new-deck {
+  font-size: 18px;
+  padding: 20px;
+  border: 2px solid #374140;
+  text-align: center;
+  
+}
+
+.new-deck:hover {
+  background:#2A2C2B;
+  color: #D9CB9E;
+  
+}

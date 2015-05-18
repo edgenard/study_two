@@ -1,31 +1,46 @@
-<header>
-  <h2> StudyTwo Overview</h2>
-</header>
-<section class="decks">
-  <ul>
-    <% decks.each(function(deck){ %>
-    <li>
-      <%= deck.escape("title") %> |
-      <%= deck.escape("description") %> |
-      <button class="edit-deck" data-id="<%= deck.escape('id') %>">
-      Edit Deck
-      </button> |
-      <button class="add-card" data-deck-id="<%= deck.escape('id') %>" >Add /Edit Cards</button>
-      <button class="delete-deck" data-id="<%= deck.escape('id') %>">
-        Delete Deck
-      </button>
-      <ul>
-        <% deck.cards().each(function(card){%>
-            <li>
-              <%= card.escape("front") %>
-            </li>
-        <% }) %>
-      </ul>
-    </li>
-    <% }) %>
-  </ul>
-  
-</section>
-<section class="form-space">
-  <button class="new-deck"> New Deck </button>
-</section>
+
+ <section class="study-section">
+   <h1>Study.  Beige.</h1>
+   <ul class="deck-status">
+     <% decks.each(function(deck){ %>
+     <li>
+       <p class="deck-title">
+        <%= deck.escape("title") %>
+       </p>
+       <p class="cards-due">
+        # cards due
+       </p>
+       <a href="#/study/<%=deck.id%>" class="study-deck">Study Now</a>   
+     </li>
+     <% }) %>
+   </ul>
+   <!-- Possible subview here -->
+   <section class="deck-mng">
+     <h2> Deck Management</h2>
+     <ul class="decks-list">
+       <% decks.each(function(deck){ %>
+         <li>
+           <p class="deck-info">
+              <%= deck.escape("title") %>
+           </p>
+           <p class="deck-info">
+             <%= deck.cards().length %> cards
+           </p>
+           
+           <p class="deck-info">
+             Avg Score: #
+           </p>
+           
+           <a href="#decks/<%=deck.id%>" class="edit-deck">Edit Deck</a>
+         </li>
+         
+      <% }) %>
+     </ul>
+   </section>
+   
+ </section>
+ <section class="form-space">
+   <a href="#decks/new" class="new-deck">New Deck</a>
+ </section>
+
+

@@ -1,8 +1,11 @@
+<a href="#" class="close-form">X</a>
+<h2> <%= deck.isNew() ? "New Deck" : "Edit Deck" %> </h2>
 <label for="deck_title">Title: </label>
 <input type="text" name="deck[title]" id="deck_title" placeholder="Name Your Deck" value="<%= deck.escape('title')%>">
 <label for="deck_description">Description: </label>
 <input type="text" name="deck[description]" id="deck_description" placeholder="Describe Your Deck" value="<%= deck.escape('description')%>">
-
-<button class="add-card">Add Card</button> | 
-<button class="deck-done">Save and Close</button> | 
-<button class="just-close">Dont Save. Just Close</button>
+<div class="form-buttons">
+<button class="add-card">Add Card</button>  
+<button class="deck-done">Save and Close</button> 
+  
+</div>

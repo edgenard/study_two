@@ -2,7 +2,7 @@ StudyTwo.Views.DeckForm = Backbone.View.extend({
   template: JST['decks/deckForm'],
   
   tagName: "form",
-  className: "deck-form ",
+  className: "form deck-form",
   
   initialize: function (options) {
     this.model = options.model;

@@ -1,7 +1,7 @@
 StudyTwo.Views.DecksIndex = Backbone.View.extend({
   template: JST['decks/deckIndex'],
   tagName: "section",
-  className: "studytwo-overview",
+  className: "user-home",
   
   initialize: function (options) {
     this.collection = options.collection;
@@ -23,7 +23,7 @@ StudyTwo.Views.DecksIndex = Backbone.View.extend({
     "click  .new-deck"     : "newDeck",
     "click  .delete-deck"  : "deleteDeck",
     "click  .edit-deck"    : "editDeck",
-    "click  .just-close"   : "removeForm",
+    "click  .close-form"   : "removeForm",
     "click  .add-card"     : "newCard"
 
   },

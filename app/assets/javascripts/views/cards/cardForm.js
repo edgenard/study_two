@@ -1,7 +1,7 @@
 StudyTwo.Views.CardForm = Backbone.View.extend({
   template: JST['cards/cardForm'],
   tagName: "form",
-  className: "card-form",
+  className: "form card-form",
   initialize: function (options) {
     this.deckId = options.deckId
     this.collection = options.collection

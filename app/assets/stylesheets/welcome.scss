@@ -53,9 +53,31 @@
 
 .flash-copy {
   display: flex;
-  width: 900px;
+  width: 840px;
   justify-content: center;
   margin: 0 auto;
+  flex-flow: column;
+  background: #2A2C2B;
+  color: #D9CB9E;
+  padding: 30px;
+}
+
+.flash-copy > h2 {
+  font-size: 24px;
+  width: 400px;
+  margin: 20px auto;
+  
+}
+
+.flash-copy > p {
+  font-size: 16px;
+  width: 400px;
+  margin: 0 auto;
+}
+
+.flash-copy > p > em {
+  background: #D9CB9E;
+  color: #2A2C2B;
 }
 
 .flash-copy >.sign-up-btn {
@@ -68,4 +90,6 @@
   color:  #2A2C2B; 
   background: #D9CB9E;
 }
+
+
 

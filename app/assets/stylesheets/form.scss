@@ -1,0 +1,90 @@
+.form-header{
+  font-size: 36px;
+  margin: 20px auto;
+  max-width: 600px;
+
+}
+
+
+.form {
+  display: flex;
+  flex-flow: column;
+  position: relative;
+  padding: 10px;
+  max-width: 600px;
+  margin: 0 auto;
+  
+}
+
+
+.form h2 {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.form > label, .form > input {
+  flex-basis: 100%;
+}
+
+.form > label {
+  font-size: 16px;
+  margin: 10px 0;
+  
+}
+
+.form > input, .form > textarea {
+  border: 1px solid #374140;
+  padding: 10px;
+  border-radius: 3px;
+}
+
+
+
+.close-form {
+  display: block;
+  position: absolute;
+  right: 0;
+  top: 0;
+  padding: 5px;
+  font-size:14px;
+  border-radius: 5px;
+}
+
+.close-form:hover {
+  color:  #2a2c2b;
+  background: #d9cb9e;
+}
+
+
+.deck-form {
+  margin: 0;
+}
+
+
+.form-buttons {
+  margin: 20px auto;
+  width: 100%;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-around;
+}
+
+.card-form .form-buttons {
+  justify-content: space-between;
+  margin: 20px;
+}
+
+
+.form-buttons button {
+  cursor: pointer;
+  border: 2px solid #374140;
+  padding: 10px;
+  border-radius: 3px;
+
+  
+}
+
+.form-buttons button:hover {
+  background:#2A2C2B;
+  color: #D9CB9E;
+}

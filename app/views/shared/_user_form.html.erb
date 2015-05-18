@@ -1,19 +1,24 @@
 
 
 <section class="user-form">
-  <form  action="<%= action_url %>" method="post">
+  <form class="form" action="<%= action_url %>" method="post">
+    
     <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
     <% if current_user %>
       <input type="hidden" name="_method" value="patch">
     <% end %>
-    <label for="user_email" class="form-field">Email:
+    <label for="user_email" class="form-field">Email:</label>
       <input type="text" name="user[email]" value="<%= @user && @user.email%>">
-    </label>
-    <label for="user_password" class="form-field">Password: (6 characters minimum)
-      <input type="password" name="user[password]" value="">
-    </label>
     
-    <input type="submit" name="" value="<%= button_text %>">
+    <label for="user_password" class="form-field">Password: (6 characters minimum) </label>
+      <input type="password" name="user[password]" value="">
+    
+    <div class="form-buttons">
+      <button type="submit" class="form-buttons" name="button">
+       <%= button_text %>
+      </button>
+    </div>
+  
     
     
   </form>

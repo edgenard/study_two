@@ -1,0 +1,27 @@
+.footer {
+  display: flex;
+  flex-flow: row;
+  margin: 0 auto; 
+  color:#D9CB9E;
+  background: #FFFFF0;
+}
+
+.footer-links {
+  width: 880px;
+  display: flex;
+  flex-flow: row;
+  justify-content: flex-start;
+  padding: 10px;
+  border-top: 1px solid #374140;
+  border-bottom: 1px solid #374140;
+}
+
+.footer-links a {
+  display: block;
+  padding: 10px 10px
+}
+
+.footer-links a:hover{
+  color:#2A2C2B;
+  text-decoration: underline;  
+}
