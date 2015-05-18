@@ -1,0 +1,32 @@
+
+.flash-msg-list {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.flash-msg-item{
+  display: block;
+  width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  text-align: center;
+  
+}
+.notice {
+  border-left: 1px solid #967117;
+  border-right: 1px solid #967117;
+  border-bottom: 1px solid #967117;
+  color: #967117;
+  background: #FFF8E7 ;
+  
+}
+
+.error {
+  border-left: 1px solid #DC3522;
+  border-right: 1px solid #DC3522;
+  border-bottom: 1px solid #DC3522;
+  color: #DC3522;
+  background: #FFFDD0 ;
+}

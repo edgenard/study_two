@@ -34,6 +34,9 @@ StudyTwo.Views.CardForm = Backbone.View.extend({
       success: function (card) {
         collection.fetch();
         Backbone.history.navigate("", {trigger: true});
+      },
+      error: function (card) {
+        console.log(card);
       }
     })
   }

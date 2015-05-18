@@ -5,6 +5,7 @@ class Api::CardsController < ApplicationController
     if @card.save
       render json: @card
     else
+      # flash.now[:errors] = ["You need a front and back"]
       render json: @card.errors.full_messages, status: :unprocessable_entity
     end
   end
@@ -14,6 +15,7 @@ class Api::CardsController < ApplicationController
     if @card.update(card_params)
       render json: @card
     else
+      # flash.now[:errors] = ["What happened to back and/or front?"]
       render json: @card.errors.full_messages, status: :unprocessable_entity
     end
   end

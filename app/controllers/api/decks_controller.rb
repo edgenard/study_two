@@ -3,9 +3,11 @@ class Api::DecksController < ApplicationController
   
   def create
     @deck = Deck.new(deck_params)
+    @deck.user_id = current_user.id
     if @deck.save
       render json: @deck
     else
+      # flash.now[:errors] = ["Where is the title?"]
       render json: @deck.errors.full_messages, status: :unprocessable_entity
     end
   end
@@ -26,6 +28,7 @@ class Api::DecksController < ApplicationController
     if @deck.update(deck_params)
       render json: @deck
     else
+      # flash.now[:errors] = ["What happened to the title?"]
       render json: @deck.errors.full_messages, status: :unprocessable_entity
     end
     

@@ -6,7 +6,6 @@ class UsersController < ApplicationController
     @user = User.new(user_params)
     if @user.save
       login!(@user)
-      flash[:notice] = "Welcome to StudyTwo!"
       redirect_to user_url(@user)
     else
       flash.now[:errors] = @user.errors.full_messages
@@ -33,7 +32,7 @@ class UsersController < ApplicationController
   def update
     @user = current_user
     if @user.update(user_params)
-      flash.now[:notice] = "Successfuly Saved"
+      flash[:notice] = "Successfuly Saved"
       redirect_to edit_user_url(@user)
     else
       flash.now[:errors] = @user.errors.full_messages
