@@ -1,0 +1,70 @@
+
+<form class="form deck-form deck-show-form" >
+<label>
+  Title
+</label>
+<a href="#" class="close-form">X</a>
+  <input type="text" name="deck[title]" value="<%=deck.escape("title")%>" class="deck-title">
+
+<label>
+  Description
+</label>
+  <input type="text" name="deck[description]"
+            class="deck-description" value="<%=deck.escape("description")%>">
+
+  <div class="form-buttons">
+     <button class="add-card" data-deck-id="<%=deck.id%>">
+       Add Card
+     </button>
+     
+     <button class="delete-deck" data-deck-id="<%=deck.id%>">
+       Delete Deck
+     </button>
+    </div>
+</form>
+
+<section class="card-mng">
+    <h3> Card Management</h3>
+    <ul class="cards-list">
+      <li>
+        <p class="card-info-header">
+          Front
+        </p>
+        <p class="card-info-header">
+          Back
+        </p>
+        <p class="card-info-header">
+          Score
+        </p>
+        <p class="card-info-header">
+          Edit/Delete
+        </p>
+      </li>
+      <% deck.cards().each(function(card){ %>
+        <li>
+          <p class="card-info">
+            <%= card.escape("front") %>
+          </p>
+          
+          <p class="card-info">
+            <%= card.escape("back") %>
+          </p>
+          
+          <p class="card-info">
+            <%= card.escape("score") %>
+          </p>
+          
+          <p class="card-info">
+            <button data-card-id="<%=card.id%>" class="edit-card">
+              Edit Card
+            </button>
+            <button data-card-id="<%=card.id%>" class= "delete-card">
+              Delete Card
+            </button>
+          </p>
+          
+        </li>
+      <% }) %>
+    </ul>
+</section>
+

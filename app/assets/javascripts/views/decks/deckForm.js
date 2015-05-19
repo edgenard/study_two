@@ -19,33 +19,33 @@ StudyTwo.Views.DeckForm = Backbone.View.extend({
     return this;
   },
   
-  events: {
-    "click  .deck-done"     : "saveDeck",
-  },
+  // events: {
+  //   "click  .deck-done"     : "saveDeck",
+  // },
   
-  saveDeck: function (event) {
-    event && event.preventDefault();
-    var deckData = $(".deck-form").serializeJSON().deck;
-  
-    this.model.get("user_id") || this.model.set("user_id", this.userId);
-    
-    var collection = this.collection;
-    
-    var form = this;
-    
-    this.model.save(deckData, {
-      success: function (deck) {
-        console.log("successfully saved deck");
-            collection.add(deck);
-      },
-      error: function (deck, response) {
-        alert(response.responseJSON.join());
-  
-      },
-      
-    });
-    
-  },
+  // saveDeck: function (event) {
+  //   event && event.preventDefault();
+  //   var deckData = $(".deck-form").serializeJSON().deck;
+  // 
+  //   this.model.get("user_id") || this.model.set("user_id", this.userId);
+  //   
+  //   var collection = this.collection;
+  //   
+  //   var form = this;
+  //   
+  //   this.model.save(deckData, {
+  //     success: function (deck) {
+  //       console.log("successfully saved deck");
+  //           collection.add(deck);
+  //     },
+  //     error: function (deck, response) {
+  //       alert(response.responseJSON.join());
+  // 
+  //     },
+  //     
+  //   });
+  //   
+  // },
   
   
   

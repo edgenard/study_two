@@ -1,12 +1,13 @@
 <a href="#" class="close-form">X</a>
 <h2> <%= card.isNew() ? "New Card" : "Edit Card" %> </h2>
 <label for="card_front">Front:</label>
-  <textarea name="card[front]" rows="8" cols="40" id="card_front" placeholder="Front Beige"> <%= card.escape("front") %></textarea>
+  <textarea name="card[front]" rows="8" cols="40" id="card_front" placeholder="Front Beige"><%= card.escape("front") %></textarea>
 
 <label for="card_back">Back:</label>
-  <textarea name="card[back]" rows="8" cols="40" placeholder="Back Beige"> <%= card.escape("back") %></textarea>
+  <textarea name="card[back]" rows="8" cols="40" placeholder="Back Beige"><%= card.escape("back") %></textarea>
 
 <div class="form-buttons">
   <button class="add-more">Save and Make More</button>
+
   <button class="card-done">Done making cards</button>   
 </div>

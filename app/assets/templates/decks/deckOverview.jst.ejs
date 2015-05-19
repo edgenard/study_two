@@ -14,7 +14,6 @@
       </li>
       <% }) %>
     </ul>
-    <!-- Possible subview here -->
     <section class="deck-mng">
       <h2> Deck Management</h2>
       <ul class="decks-list">
@@ -31,7 +30,7 @@
               Avg Score: #
             </p>
             
-            <a href="#decks/<%=deck.id%>" class="edit-deck" data-id="<%=deck.id%>">Edit Deck</a>
+            <a href="#decks/<%=deck.id%>" class="edit-deck" data-deck-id="<%=deck.id%>">Edit Deck</a>
           </li>
           
        <% }) %>

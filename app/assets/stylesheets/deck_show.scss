@@ -1,0 +1,84 @@
+.deck-show{
+  display: flex;
+  flex-flow: column;
+  
+}
+
+.form-buttons .delete-deck {
+  color: #DC3522;
+  border: 2px solid #DC3522;
+}
+
+.form-buttons .delete-deck:hover {
+  background: #DC3522;
+  color: #FFFFF0;
+}
+
+.card-mng{
+  display: flex;
+  flex-flow: column;
+}
+
+.card-mng h3{
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  
+}
+
+.cards-list {
+  display: flex;
+  flex-flow: column;
+  overflow: scroll;
+  max-height: 400px;
+}
+
+.cards-list > li {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+.cards-list > li:nth-child(even) {
+  background: #D9CB9E;
+}
+
+.card-info, .card-info-header {
+  flex: 1 1 25%;
+}
+
+.card-info {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  min-height: 50px;
+  max-height: 80px;
+  align-self: center;
+}
+
+.card-info:last-child {
+  display: flex;
+  flex-flow: row;
+}
+
+.card-info > button {
+  display: block;
+  padding: 2px;
+  margin: 2px 3px;
+  border: 1px solid #374140;
+  align-self: center;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.card-info > button:hover {
+  background:#2A2C2B;
+  color: #D9CB9E;
+}
+
+
+.card-info-header {
+  font-weight: bold;
+  border-bottom: 2px solid #374140;
+}
