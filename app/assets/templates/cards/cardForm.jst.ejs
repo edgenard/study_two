@@ -2,7 +2,7 @@
 <h2> <%= card.isNew() ? "New Card" : "Edit Card" %> </h2>
 <label for="card_front">Front:</label>
   <textarea name="card[front]" rows="8" cols="40" id="card_front" placeholder="Front Beige"> <%= card.escape("front") %></textarea>
-<input type="hidden" name="card[deck_id]" value="<%=deckId%>">
+
 <label for="card_back">Back:</label>
   <textarea name="card[back]" rows="8" cols="40" placeholder="Back Beige"> <%= card.escape("back") %></textarea>
 

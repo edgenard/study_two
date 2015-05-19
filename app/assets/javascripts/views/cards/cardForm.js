@@ -3,42 +3,18 @@ StudyTwo.Views.CardForm = Backbone.View.extend({
   tagName: "form",
   className: "form card-form",
   initialize: function (options) {
-    this.deckId = options.deckId
+    this.deck = options.deck
     this.collection = options.collection
     this.listenTo(this.model, "sync", this.render);
+    
   },
   
   render: function () {
-    var content = this.template({card: this.model, deckId: this.deckId});
+    var content = this.template({card: this.model, deck: this.deck});
     this.$el.html(content);
     return this;
   },
   
-  events: {
-    "click .add-more": "addMore",
-    "click .card-done": "saveCard",
-  },
-  
-  addMore: function (event) {
-    event.preventDefault();
-    console.log(event);
-  },
-  
-  saveCard: function (event) {
-    event.preventDefault();
-    var cardData = this.$el.serializeJSON();
-    var cardForm = this;
-    var collection = this.collection;
-    var deckId = this.deckId
-    this.model.save(cardData, {
-      success: function (card) {
-        collection.fetch();
-        Backbone.history.navigate("", {trigger: true});
-      },
-      error: function (card) {
-        console.log(card);
-      }
-    })
-  }
+
   
 })

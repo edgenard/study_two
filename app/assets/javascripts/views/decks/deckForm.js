@@ -24,8 +24,7 @@ StudyTwo.Views.DeckForm = Backbone.View.extend({
   },
   
   saveDeck: function (event) {
-    event.preventDefault();
-    
+    event && event.preventDefault();
     var deckData = $(".deck-form").serializeJSON().deck;
   
     this.model.get("user_id") || this.model.set("user_id", this.userId);
@@ -36,9 +35,9 @@ StudyTwo.Views.DeckForm = Backbone.View.extend({
     
     this.model.save(deckData, {
       success: function (deck) {
+        console.log("successfully saved deck");
             collection.add(deck);
       },
-      wait: true,
       error: function (deck, response) {
         alert(response.responseJSON.join());
   

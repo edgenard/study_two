@@ -6,17 +6,20 @@ StudyTwo.Views.DecksIndex = Backbone.View.extend({
   initialize: function (options) {
     this.collection = options.collection;
     this.userId = options.userId;
-    this.listenTo(this.collection, "sync add remove change", this.render);
-    this.$formSpace = this.$el.find(".form-space");
+    this.deckOverview = new StudyTwo.Views.DeckOverview({
+      collection: this.collection
+    })
+  
   },
   
   
   render: function () {
-    var content = this.template({
-      decks: this.collection
-    });
+    var content = this.template({});
     
     this.$el.html(content);
+    this.$el.prepend(this.deckOverview.render().$el)
+    
+    
     return this;
   },
   
@@ -26,15 +29,17 @@ StudyTwo.Views.DecksIndex = Backbone.View.extend({
     "click  .edit-deck"    : "editDeck",
     "click  .close-form"   : "removeForm",
     "click  .add-card"     : "newCard",
+    "click .card-done"     : "saveCard",
     "click .deck-done"     : "saveDeck",
+    "click .add-more"      : "saveCardAndMore",
 
   },
   
   removeForm: function (event) {
-    event.preventDefault();
+    event && event.preventDefault();
     this.deckFormView && this.deckFormView.remove();
     this.cardFormView && this.cardFormView.remove();
-    this.collection.fetch();
+    this.render();
   },
   
   newDeck: function (event) {
@@ -58,13 +63,12 @@ StudyTwo.Views.DecksIndex = Backbone.View.extend({
       collection: this.collection,
       userId: this.userId
     });
-    debugger;
-    this.$formSpace.html(this.deckFormView.render().$el);  
+
+    this.$el.find(".form-space").html(this.deckFormView.render().$el);  
   },
 
   newCard: function (event) {
     event.preventDefault();
-    this.deckFormView && this.deckFormView.trigger("click .deck-done");
     var deck = this.deckFormView.model;
     var card = new StudyTwo.Models.Card();
     this.cardForm(card, deck);
@@ -76,8 +80,53 @@ StudyTwo.Views.DecksIndex = Backbone.View.extend({
       deck: deck,
       collection: this.collection,
     });
-    this.deckFormView && this.deckFormView.remove();
-    this.$formSpace.html(this.cardFormView.render().$el);
+    this.deckFormView && this.deckFormView.saveDeck() && this.deckForView.remove();
+    this.$el.find(".form-space").html(this.cardFormView.render().$el);
+  },
+  
+  
+  saveCard: function (event) {
+    event.preventDefault();
+    var cardData = this.$(".card-form").serializeJSON().card
+    var collection = this.collection;
+    cardData.deck_id = this.cardFormView.deck.id
+    var that = this;
+    this.cardFormView.model.save(cardData, {
+      success: function (card) {
+        that.removeForm();
+        collection.fetch();
+      },
+      error: function (card) {
+        console.log(card);
+      }
+    })
+  },
+  
+  
+  saveCardAndMore: function (event) {
+    event && event.preventDefault();
+    var oldCard = this.cardFormView
+    
+    this.deckFormView = null;
+  
+    var cardData = this.$(".card-form").serializeJSON().card
+    var collection = this.collection;
+    var that = this;
+    cardData.deck_id = oldCard.deck.id
+    oldCard.model.save(cardData, {
+      success: function (card) {
+        collection.fetch();
+        console.log("successfuly saved");
+      },
+      error: function (card) {
+        console.log("something went wrong");
+      }
+    });
+    
+    var deck = oldCard.deck
+    var newCard = new StudyTwo.Models.Card();
+    this.cardForm(newCard, deck)
+    
   },
   
   deleteDeck: function (event) {
