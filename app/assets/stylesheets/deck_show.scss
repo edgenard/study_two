@@ -4,12 +4,13 @@
   
 }
 
-.form-buttons .delete-deck {
+.form-buttons .delete-deck, .cards-list .delete-card {
   color: #DC3522;
   border: 2px solid #DC3522;
 }
 
-.form-buttons .delete-deck:hover {
+.form-buttons .delete-deck:hover,
+.cards-list .delete-card:hover {
   background: #DC3522;
   color: #FFFFF0;
 }
@@ -30,15 +31,21 @@
   display: flex;
   flex-flow: column;
   overflow: scroll;
-  max-height: 400px;
+  max-height: 500px;
+  font-size: 14px;
 }
 
-.cards-list > li {
+.cards-list  li {
   display: flex;
   flex-flow: row nowrap;
-  justify-content: center;
+
   align-items: center;
   
+}
+
+.cards-list > li:first-child {
+  border-bottom: 1px solid #374140;
+  padding-bottom: 10px;
 }
 
 .cards-list > li:nth-child(even) {
@@ -46,7 +53,7 @@
 }
 
 .card-info, .card-info-header {
-  flex: 1 1 25%;
+  flex-basis: 25%;
 }
 
 .card-info {
@@ -54,7 +61,7 @@
   overflow: hidden;
   min-height: 50px;
   max-height: 80px;
-  align-self: center;
+
 }
 
 .card-info:last-child {
@@ -80,5 +87,4 @@
 
 .card-info-header {
   font-weight: bold;
-  border-bottom: 2px solid #374140;
 }

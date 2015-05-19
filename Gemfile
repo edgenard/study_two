@@ -15,6 +15,13 @@ gem 'unicorn'
 
 gem 'backbone-on-rails'
 
+gem "paperclip"
+
+gem "figaro"
+
+gem "aws-sdk"
+
+
 group :production do
   gem 'rails_12factor'
 end

@@ -35,6 +35,7 @@ StudyTwo.Views.DecksIndex = Backbone.View.extend({
     "blur  .deck-title"       : "saveDeck",
     "blur  .deck-description" : "saveDeck",
     "click  .edit-card"       : "editCard",
+    "click .delete-card"      : "deleteCard",
 
   },
   
@@ -140,7 +141,8 @@ StudyTwo.Views.DecksIndex = Backbone.View.extend({
     var cardAndDeck = this._getCardAndDeck(event);
     var card = cardAndDeck[0];
     var deck = cardAndDeck[1];
-    
+    console.log(card, deck);
+    this.cardForm(card, deck);
     
     
   },
@@ -149,12 +151,17 @@ StudyTwo.Views.DecksIndex = Backbone.View.extend({
     event && event.preventDefault();
     var cardData = this.$(".card-form").serializeJSON().card
     var collection = this.collection;
-    cardData.deck_id = this.cardFormView.deck.id
+    cardData.deck_id = this.cardFormView.deck.id;
+    var card = this.cardFormView.model;
     var that = this;
-    this.cardFormView.model.save(cardData, {
-      success: function (card) {
-        that.removeForm();
+    var showView = this.deckShowView;
+    var deck = showView.model
+    card.save(cardData, {
+      success: function (card) { 
+        showView && deck.cards().add(card);
+        showView && that.$el.find(".form-space").html(showView.render().$el)
         collection.fetch();
+        that.cardFormView.remove();
       },
       error: function (card) {
         console.log(card);
@@ -206,6 +213,25 @@ StudyTwo.Views.DecksIndex = Backbone.View.extend({
         alert("Did not Work!!");
       }
     });
+  },
+  
+  deleteCard: function (event) {
+    event && event.preventDefault();
+    if(!confirm("Are you sure?! Deletes are forever!")) return;
+    var cardAndDeck = this._getCardAndDeck(event);
+    var card = cardAndDeck[0];
+    var deck = cardAndDeck[1];
+    var collection = this.collection;
+    var that = this;
+    var showView = this.deckShowView
+    card.destroy({
+      success: function (card) {
+        deck.cards().remove(card);
+        collection.fetch();
+        showView && that.$el.find(".form-space").html(showView.render().$el)
+      }
+    })
+    
   },
 
   
