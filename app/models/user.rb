@@ -1,7 +1,7 @@
 class User < ActiveRecord::Base
   attr_reader :password
   validates :email, :password_digest, :session_token, presence: true
-  validates :password, length: { minimum: 6, allow_blank: true }
+  validates :password, length: { minimum: 6, allow_nil: true }
   validates :email, uniqueness: true
   
   has_many :decks
@@ -19,6 +19,22 @@ class User < ActiveRecord::Base
     user.is_password?(password) ? user : nil
   end
   
+  def self.find_or_create_by_auth(auth_hash)
+    user = User.find_by(
+          provider: auth_hash[:provider],
+          uid: auth_hash[:uid])
+    unless user
+      user_email = auth_hash[:info][:email] + "@twitter.login"
+      user = User.create!(
+      provider: auth_hash[:provider],
+      uid: auth_hash[:uid],
+      email: user_email,
+      password: SecureRandom::base64
+      )
+    end
+    
+    user
+  end
   
   def password=(password)
     @password = password

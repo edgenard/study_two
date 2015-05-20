@@ -11,7 +11,7 @@
       <input type="text" name="user[email]" value="<%= @user && @user.email%>">
     
     <label for="user_password" class="form-field">Password: (6 characters minimum) </label>
-      <input type="password" name="user[password]" value="">
+      <input type="password" name="user[password]">
     
     <div class="form-buttons">
       <button type="submit" class="form-buttons" name="button">
@@ -19,7 +19,9 @@
       </button>
     </div>
   
-    
+    <div class="twitter-signin">
+      <a  href="/auth/twitter">Sign in with Twitter</a>
+    </div>
     
   </form>
   

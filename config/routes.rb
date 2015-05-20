@@ -11,4 +11,6 @@ StudyTwo::Application.routes.draw do
    resources :cards, only: [:create, :destroy, :index, :show, :update]
    
  end
+ 
+ get "auth/:provider/callback", to: "sessions#twitter_signin"
 end

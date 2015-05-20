@@ -21,6 +21,8 @@ gem "figaro"
 
 gem "aws-sdk"
 
+gem "omniauth-twitter"
+
 
 group :production do
   gem 'rails_12factor'

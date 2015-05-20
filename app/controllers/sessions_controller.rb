@@ -21,4 +21,17 @@ class SessionsController < ApplicationController
     logout!
     redirect_to new_session_url
   end
+  
+  def twitter_signin
+    @user = User.find_or_create_by_auth(auth_hash)
+    login!(@user)
+    redirect_to user_url(@user)
+    
+  end
+  
+  private 
+  def auth_hash
+    request.env["omniauth.auth"]
+  end
+  
 end
