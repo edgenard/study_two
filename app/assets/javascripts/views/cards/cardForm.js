@@ -15,6 +15,73 @@ StudyTwo.Views.CardForm = Backbone.View.extend({
     return this;
   },
   
+  events: {
+    "change #front-image": "frontImage",
+    "change #back-image": "backImage"
+  },
+  
+  frontImage: function (event) {
+    var that = this;
+    var file = event.currentTarget.files[0];
+    var reader = new FileReader();
+    reader.onloadend = function () {
+      that._previewFront(reader.result);
+      that.model.set("front_image", reader.result);
+      console.log(that.model);
+    };
+    
+    if (file) {
+      reader.readAsDataURL(file);
+    } else {
+      that._previewFront("");
+      that.model.unset("front_image");
+    }
+    
+  },
+  
+  backImage: function (event) {
+    var that = this;
+    var file = event.currentTarget.files[0];
+    var reader = new FileReader();
+    reader.onloadend = function () {
+      that._previewBack(reader.result);
+      that.model.set("back_image", reader.result);
+      console.log(that.model);
+      
+    };
+    
+    if (file) {
+      reader.readAsDataURL(file);
+    } else {
+      that._previewBack("");
+      that.model.unset("back_image");
+    }
+  },
+  
+  _previewFront: function (src) {
+    if (src) {
+      var previewImg = $("<img>");
+      previewImg.attr("src", src).attr("width", "175").
+      attr("height", "75").attr("id", "preview-front");
+      $("#preview-front").remove();
+      this.$("#card_front").after(previewImg);
+    } else {
+      $("#preview-front").remove();
+    }
+  },
+  
+  
+  _previewBack: function (src) {
+    if (src) {
+      var previewImg = $("<img>");
+      previewImg.attr("src", src).attr("width", "175").
+      attr("height", "75").attr("id", "preview-back");
+      $("#preview-back").remove();
+      this.$("#card_back").after(previewImg);
+    } else {
+      $("#preview-back").remove();
+    }
+  }
 
   
 })

@@ -11,20 +11,24 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150520124709) do
+ActiveRecord::Schema.define(version: 20150520184715) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "cards", force: :cascade do |t|
-    t.integer  "deck_id",              null: false
-    t.text     "front",                null: false
-    t.text     "back",                 null: false
-    t.integer  "score",                null: false
-    t.string   "picture_file_name"
-    t.string   "picture_content_type"
-    t.integer  "picture_file_size"
-    t.datetime "picture_updated_at"
+    t.integer  "deck_id",                  null: false
+    t.text     "front",                    null: false
+    t.text     "back",                     null: false
+    t.integer  "score",                    null: false
+    t.string   "front_image_file_name"
+    t.string   "front_image_content_type"
+    t.integer  "front_image_file_size"
+    t.datetime "front_image_updated_at"
+    t.string   "back_image_file_name"
+    t.string   "back_image_content_type"
+    t.integer  "back_image_file_size"
+    t.datetime "back_image_updated_at"
   end
 
   create_table "decks", force: :cascade do |t|

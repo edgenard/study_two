@@ -21,13 +21,13 @@ module StudyTwo
     # config.i18n.default_locale = :de
     
     
-    # config.paperclip_defaults = {
-    #   :storage => :s3,
-    #   :s3_credentials => {
-    #     :bucket => "cats-demo",
-    #     :access_key_id => ENV["s3_access_key_id"],
-    #     :secret_access_key => ENV["s3_secret_access_key"]
-    #   }
-    # }
+    config.paperclip_defaults = {
+    :storage => :s3,
+    :s3_credentials => {
+      :bucket => ENV["s3_bucket"],
+      :access_key_id => ENV["s3_access_key_id"],
+      :secret_access_key => ENV["s3_secret_access_key"]
+    }
+  }
   end
 end

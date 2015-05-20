@@ -24,7 +24,7 @@ class User < ActiveRecord::Base
           provider: auth_hash[:provider],
           uid: auth_hash[:uid])
     unless user
-      user_email = auth_hash[:info][:email] + "@twitter.login"
+      user_email = auth_hash[:info][:nickname] + "@twitter.login"
       user = User.create!(
       provider: auth_hash[:provider],
       uid: auth_hash[:uid],

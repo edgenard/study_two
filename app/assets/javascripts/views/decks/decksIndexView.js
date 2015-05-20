@@ -182,6 +182,7 @@ StudyTwo.Views.DecksIndex = Backbone.View.extend({
     cardData.deck_id = oldCard.deck.id
     oldCard.model.save(cardData, {
       success: function (card) {
+        
         collection.fetch();
         console.log("successfuly saved");
       },
