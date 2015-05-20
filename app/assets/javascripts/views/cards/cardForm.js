@@ -26,7 +26,7 @@ StudyTwo.Views.CardForm = Backbone.View.extend({
     var reader = new FileReader();
     reader.onloadend = function () {
       that._previewFront(reader.result);
-      that.model.set("front_image", reader.result);
+      that.model.front_image = reader.result;
       console.log(that.model);
     };
     
@@ -34,7 +34,7 @@ StudyTwo.Views.CardForm = Backbone.View.extend({
       reader.readAsDataURL(file);
     } else {
       that._previewFront("");
-      that.model.unset("front_image");
+      delete that.model.front_image;
     }
     
   },
@@ -45,7 +45,7 @@ StudyTwo.Views.CardForm = Backbone.View.extend({
     var reader = new FileReader();
     reader.onloadend = function () {
       that._previewBack(reader.result);
-      that.model.set("back_image", reader.result);
+      that.model.back_image = reader.result;
       console.log(that.model);
       
     };
@@ -54,7 +54,7 @@ StudyTwo.Views.CardForm = Backbone.View.extend({
       reader.readAsDataURL(file);
     } else {
       that._previewBack("");
-      that.model.unset("back_image");
+      delete that.model.back_image;
     }
   },
   

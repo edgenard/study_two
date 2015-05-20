@@ -95,12 +95,10 @@ StudyTwo.Views.DecksIndex = Backbone.View.extend({
     
     deck.save(deckData, {
       success: function (deck) {
-        console.log("successfully saved deck");
             collection.add(deck);
       },
       error: function (deck, response) {
         alert(response.responseJSON.join());
-  
       },
       
     });
@@ -154,8 +152,13 @@ StudyTwo.Views.DecksIndex = Backbone.View.extend({
     cardData.deck_id = this.cardFormView.deck.id;
     var card = this.cardFormView.model;
     var that = this;
-    var showView = this.deckShowView;
-    var deck = showView.model
+    
+    if (this.deckShowView) {
+      var showView = this.deckShowView;
+      var deck = showView.model;
+    }
+    
+    
     card.save(cardData, {
       success: function (card) { 
         showView && deck.cards().add(card);

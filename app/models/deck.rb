@@ -1,7 +1,7 @@
 class Deck < ActiveRecord::Base
   validates :title, :user_id, presence: true
   belongs_to :user
-  has_many :cards
+  has_many :cards, dependent: :destroy
   
   def average_score
     total_score = 0

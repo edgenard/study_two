@@ -4,7 +4,7 @@ class User < ActiveRecord::Base
   validates :password, length: { minimum: 6, allow_nil: true }
   validates :email, uniqueness: true
   
-  has_many :decks
+  has_many :decks, dependent: :destroy
   
   after_initialize :ensure_session_token
   

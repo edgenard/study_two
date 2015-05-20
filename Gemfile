@@ -19,7 +19,7 @@ gem "paperclip"
 
 gem "figaro"
 
-gem "aws-sdk"
+gem 'aws-sdk', '~> 1.6'
 
 gem "omniauth-twitter"
 

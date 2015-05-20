@@ -43,11 +43,19 @@
       <% deck.cards().each(function(card){ %>
         <li>
           <p class="card-info">
-            <%= card.escape("front") %>
+            <% if (card.escape("front_image_url").length > 3) { %>
+                <img src="<%=card.escape("front_image_url")%>" alt="front card thumbnail" class="card-thumbnail" />
+            <% } else { %>
+              <%=  card.escape("front") %>
+            <% } %>
           </p>
           
           <p class="card-info">
-            <%= card.escape("back") %>
+            <% if (card.escape("back_image_url").length > 3) { %>
+                <img src="<%=card.escape("back_image_url")%>" alt="back card thumbnail" class="card-thumbnail" />
+            <% } else { %>
+              <%=  card.escape("back") %>
+            <% } %>
           </p>
           
           <p class="card-info">
