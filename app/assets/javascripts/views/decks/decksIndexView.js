@@ -139,7 +139,6 @@ StudyTwo.Views.DecksIndex = Backbone.View.extend({
     var cardAndDeck = this._getCardAndDeck(event);
     var card = cardAndDeck[0];
     var deck = cardAndDeck[1];
-    console.log(card, deck);
     this.cardForm(card, deck);
     
     

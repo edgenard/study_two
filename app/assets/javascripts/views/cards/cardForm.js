@@ -27,7 +27,6 @@ StudyTwo.Views.CardForm = Backbone.View.extend({
     reader.onloadend = function () {
       that._previewFront(reader.result);
       that.model.front_image = reader.result;
-      console.log(that.model);
     };
     
     if (file) {
@@ -60,8 +59,7 @@ StudyTwo.Views.CardForm = Backbone.View.extend({
   _previewFront: function (src) {
     if (src) {
       var previewImg = $("<img>");
-      previewImg.attr("src", src).attr("width", "175").
-      attr("height", "75").attr("id", "preview-front");
+      previewImg.attr("src", src).attr("id", "preview-front");
       $("#card_front img").remove();
       this.$("#card_front").append(previewImg);
     } else {
@@ -73,8 +71,7 @@ StudyTwo.Views.CardForm = Backbone.View.extend({
   _previewBack: function (src) {
     if (src) {
       var previewImg = $("<img>");
-      previewImg.attr("src", src).attr("width", "175").
-      attr("height", "75").attr("id", "preview-back");
+      previewImg.attr("src", src).attr("id", "preview-back");
       $("#card_back img").remove();
       this.$("#card_back").append(previewImg);
     } else {
