@@ -9,7 +9,7 @@ class Deck < ActiveRecord::Base
       total_score += card.score
     end
     
-    total_score.to_f / self.cards.length
+    ((total_score.to_f / self.cards.length) * 100.0).round / 100.0
     
   end
   

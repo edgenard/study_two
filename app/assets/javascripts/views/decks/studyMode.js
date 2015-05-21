@@ -57,7 +57,12 @@ StudyTwo.Views.StudyMode = Backbone.View.extend({
         console.log("card has score of", card.get("score"));
       },
     });
-    this.collection.trigger("next");
+    if (this.collection.length > 0) {
+      this.collection.trigger("next");
+    } else {
+      Backbone.history.navigate("", {trigger: true})
+    }
+    
   },
   
   totallyRight: function (event) {
@@ -70,7 +75,11 @@ StudyTwo.Views.StudyMode = Backbone.View.extend({
         console.log("card has score of", card.get("score"));
       },
     });
-    this.collection.trigger("next");
+    if (this.collection.length > 0) {
+      this.collection.trigger("next");
+    } else {
+      Backbone.history.navigate("", {trigger: true})
+    }
 
   },
   

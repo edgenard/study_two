@@ -18,5 +18,6 @@ StudyTwo.Views.StudyCard = Backbone.View.extend({
   showBack: function (event) {
     event.preventDefault();
     this.$(".card-back").addClass("reveal");
+    this.$(".answer-buttons").addClass("reveal");
   }
 })

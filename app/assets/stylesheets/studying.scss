@@ -1,0 +1,97 @@
+.study-mode {
+  display: flex;
+  max-width: 900px;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  padding: 10px;
+}
+
+.study-mode h2 {
+  font-size: 24px;
+  margin: 20px auto;
+  
+}
+
+.study-mode h3 {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.card-view {
+  display: flex;
+  max-width: 600px;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.card-front, .card-back {
+  display: flex;
+  flex-flow: column;
+  max-width: 500px;
+  min-height: 200px;
+  justify-content: center;
+  font-size: 18px;
+  padding: 10px;
+  align-items: center;
+  border: 1px solid #374140;
+  margin: 20px auto;
+  
+}
+
+.card-back {
+  display: none;
+  transition: display 0.5s;
+}
+
+
+
+.study-mode button {
+  max-width: 200px;
+  cursor: pointer;
+  border: 2px solid #D9CB9E;
+  padding: 10px;
+  border-radius: 3px;
+  font-size: 14px;
+}
+
+.show-answer:hover {
+  background: #2A2C2B;
+  color: #D9CB9E;
+}
+.answer-buttons h3 {
+  font-weight: normal;
+}
+.answer-buttons {
+  display: none;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  min-width: 400px;
+  
+}
+
+.wrong-answer:hover {
+  background: #2A2C2B;
+  color: #D9CB9E;
+}
+
+.kinda-right-answer:hover {
+  background: #2A2C2B;
+  color: #D9CB9E;
+}
+
+.totally-right:hover {
+  background: #2A2C2B;
+  color: #D9CB9E;
+}
+
+
+
+
+.reveal{
+  display: flex;
+    
+}
