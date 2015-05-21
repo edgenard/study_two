@@ -1,0 +1,19 @@
+
+<section class="card-front">
+<p>
+  <%= card.escape("front") %><% if (card.escape("front_image_url").length > 3){ %><img src="<%=card.escape('front_image_url')%>" alt="front card image" class="study-front-image"/><% } %>
+</p>
+
+<button type="button" class="show-answer">Show Answer</button>
+</section>
+<section class="card-back">
+  <p>
+    <%= card.escape("back") %><% if (card.escape("back_image_url").length > 3){ %><img src="<%=card.escape('back_image_url')%>" alt="back card image" class-"study-back-image"/><% } %>
+  </p>
+  <div class="answer-buttons">
+    <button type="button" class="wrong-answer">Wrong Answer</button>
+    <button type="button" class="kinda-right-answer">Kinda Right</button>
+    <button type="button" class="totally-right">Totally Right</button>
+  </div>
+  
+</section>

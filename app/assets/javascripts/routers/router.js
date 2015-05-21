@@ -8,6 +8,7 @@ StudyTwo.Routers.Router = Backbone.Router.extend({
 
   routes: {
     "":"index",
+    "study/:id": "studyMode",
 
   },
   
@@ -20,6 +21,15 @@ StudyTwo.Routers.Router = Backbone.Router.extend({
     });  
     this._swapView(decksIndexView);
     
+  },
+  
+  studyMode: function (id) {
+    var deck = this.decks.getOrFetch(id);
+    var studyView = new StudyTwo.Views.StudyMode({
+      collection: deck.cards()
+    });
+    
+    this._swapView(studyView);
   },
   
   
