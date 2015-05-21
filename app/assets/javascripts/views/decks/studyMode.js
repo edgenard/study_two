@@ -36,11 +36,11 @@ StudyTwo.Views.StudyMode = Backbone.View.extend({
     event.preventDefault();
     var oldCardView = this.cardView;
     var card = oldCardView.model;
-    card.set("score", 0)
-    card.save({score: 0}, {
+    var streakNow = Math.floor(card.get("streak") / 2);
+    
+    card.save({score: 0, streak: streakNow}, {
       success: function (card) {
-        console.log("successfully saved card");
-        console.log("card has score of", card.get("score"));    
+        console.log(card);   
       }
     });
     this.collection.push(card)
@@ -51,10 +51,11 @@ StudyTwo.Views.StudyMode = Backbone.View.extend({
     event.preventDefault();
     var oldCardView = this.cardView;
     var card = oldCardView.model;
-    card.save({score: 1}, {
+    var streakNow = card.get("streak") + 1;
+    
+    card.save({score: 1, streak: streakNow}, {
       success: function (card) {
-        console.log("successfully saved card");
-        console.log("card has score of", card.get("score"));
+        console.log(card);
       },
     });
     if (this.collection.length > 0) {
@@ -69,10 +70,11 @@ StudyTwo.Views.StudyMode = Backbone.View.extend({
     event.preventDefault();
     var oldCardView = this.cardView;
     var card = oldCardView.model;
-    card.save({score: 2}, {
+    var streakNow = card.get("streak") + 3;
+  
+    card.save({score: 2, streak: streakNow}, {
       success: function (card) {
-        console.log("successfully saved card");
-        console.log("card has score of", card.get("score"));
+        console.log(card);
       },
     });
     if (this.collection.length > 0) {

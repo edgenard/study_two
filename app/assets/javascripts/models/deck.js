@@ -6,6 +6,10 @@ StudyTwo.Models.Deck = Backbone.Model.extend({
       this.cards().set(payload.cards);
       delete payload.cards
     }
+    if (payload.due_cards) {
+      this.dueCards().set(payload.due_cards);
+      delete payload.due_cards;
+    }
     
     return payload;
   },
@@ -15,6 +19,13 @@ StudyTwo.Models.Deck = Backbone.Model.extend({
       this._cards = new StudyTwo.Collections.Cards();
     }
     return this._cards;
-  }
+  },
+  
+  dueCards: function () {
+    if (!this._dueCards) {
+      this._dueCards = new StudyTwo.Collections.Cards();
+    }
+    return this._dueCards; 
+  },
   
 })

@@ -26,7 +26,7 @@ StudyTwo.Routers.Router = Backbone.Router.extend({
   studyMode: function (id) {
     var deck = this.decks.getOrFetch(id);
     var studyView = new StudyTwo.Views.StudyMode({
-      collection: deck.cards()
+      collection: deck.dueCards()
     });
     
     this._swapView(studyView);

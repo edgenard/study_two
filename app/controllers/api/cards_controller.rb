@@ -33,7 +33,7 @@ class Api::CardsController < ApplicationController
   
   private
   def card_params
-    params.require(:card).permit(:deck_id, :front, :back, :score, :front_image, :back_image)
+    params.require(:card).permit(:deck_id, :front, :back, :score, :front_image, :back_image, :streak)
   end
   
   
