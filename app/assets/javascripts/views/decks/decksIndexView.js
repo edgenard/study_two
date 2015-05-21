@@ -147,7 +147,7 @@ StudyTwo.Views.DecksIndex = Backbone.View.extend({
   
   saveCard: function (event) {
     event && event.preventDefault();
-    var cardData = this.$(".card-form").serializeJSON().card
+    var cardData = this._getCardFormData();
     var collection = this.collection;
     cardData.deck_id = this.cardFormView.deck.id;
     var card = this.cardFormView.model;
@@ -161,7 +161,7 @@ StudyTwo.Views.DecksIndex = Backbone.View.extend({
     
     card.save(cardData, {
       success: function (card) { 
-        showView && deck.cards().add(card);
+        showView && deck.cards().add(card) && deck.fetch();
         showView && that.$el.find(".form-space").html(showView.render().$el)
         collection.fetch();
         that.cardFormView.remove();
@@ -179,7 +179,8 @@ StudyTwo.Views.DecksIndex = Backbone.View.extend({
     
     this.deckFormView = null;
   
-    var cardData = this.$(".card-form").serializeJSON().card
+    var cardData = this._getCardFormData();
+    
     var collection = this.collection;
     var that = this;
     cardData.deck_id = oldCard.deck.id
@@ -199,6 +200,21 @@ StudyTwo.Views.DecksIndex = Backbone.View.extend({
     var newCard = new StudyTwo.Models.Card();
     this.cardForm(newCard, deck)
     
+  },
+  
+  _getCardFormData: function () {
+    var formData = {};
+    var value;
+    $(".card-form").children("div[contenteditable]").each(function () {
+      value =  this.textContent;
+      if (this.id === "card_front") {
+        formData["front"] = value;
+      } else {
+        formData["back"] = value;
+      }
+    });
+    
+    return formData;
   },
   
   deleteDeck: function (event) {
