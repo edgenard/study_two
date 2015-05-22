@@ -1,4 +1,4 @@
-require "byebug"
+
 class Deck < ActiveRecord::Base
   include ActionView::Helpers::DateHelper
   validates :title, :user_id, presence: true
