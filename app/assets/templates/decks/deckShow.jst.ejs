@@ -31,10 +31,10 @@
           Front
         </p>
         <p class="card-info-header">
-          Back
+          Due:
         </p>
         <p class="card-info-header">
-          Score
+          Streak | Score
         </p>
         <p class="card-info-header">
           Edit/Delete
@@ -46,20 +46,19 @@
             <% if (card.escape("front_image_url").length > 3) { %>
                 <img src="<%=card.escape("front_image_url")%>" alt="front card thumbnail" class="card-thumbnail" />
             <% } else { %>
+              
               <%=  card.escape("front") %>
             <% } %>
           </p>
           
           <p class="card-info">
-            <% if (card.escape("back_image_url").length > 3) { %>
-                <img src="<%=card.escape("back_image_url")%>" alt="back card thumbnail" class="card-thumbnail" />
-            <% } else { %>
-              <%=  card.escape("back") %>
-            <% } %>
+            
+            <%= card.escape("due_date_in_words") %>
           </p>
           
           <p class="card-info">
-            <%= card.escape("score") %>
+            
+            <%= card.escape("streak")  %> | <%= card.escape("score") %>
           </p>
           
           <p class="card-info">

@@ -1,5 +1,8 @@
 <a href="#" class="close-form">X</a>
 <h2> <%= card.isNew() ? "New Card" : "Edit Card" %> </h2>
+<% if(!card.isNew()){ %>
+  <h3> Due in <%= card.escape("due_date_in_words")  %> </h3>
+<% } %>
 <label for="card_front">Front:</label>
 <input type="file" id="front-image">
   <div id="card_front" contenteditable="true" data-ph="Type in the front of your card here you can also add a picture by choosing a file above ↑"><%= card.escape("front") %><% if (card.escape("front_image_url").length > 3){ %><img src="<%=card.escape('front_image_url')%>" alt="front card image"/><% } %></div>

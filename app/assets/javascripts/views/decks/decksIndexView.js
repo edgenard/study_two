@@ -151,16 +151,16 @@ StudyTwo.Views.DecksIndex = Backbone.View.extend({
     cardData.deck_id = this.cardFormView.deck.id;
     var card = this.cardFormView.model;
     var that = this;
-    
+    var deck = this.collection.getOrFetch(cardData.deck_id)
     if (this.deckShowView) {
-      var showView = this.deckShowView;
-      var deck = showView.model;
+      this.deckShowView.remove();
     }
+    var showView = this.deckShowView = new StudyTwo.Views.DeckShow({model: deck});
     
     
     card.save(cardData, {
       success: function (card) { 
-        showView && deck.cards().add(card) && deck.fetch();
+        showView && deck.cards().add(card);
         showView && that.$el.find(".form-space").html(showView.render().$el)
         collection.fetch();
         that.cardFormView.remove();

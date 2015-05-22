@@ -1,3 +1,4 @@
+require "byebug"
 class Deck < ActiveRecord::Base
   include ActionView::Helpers::DateHelper
   validates :title, :user_id, presence: true
@@ -21,27 +22,23 @@ class Deck < ActiveRecord::Base
     earliest_time = get_earliest_time
     next_due = []
     self.cards.each do |card|
-      next_due.push(card) if card.due_date.to_i == earliest_time
+      next_due.push(card) if card.due_date == earliest_time
     end
     next_due
   end
   
   def get_earliest_time
-    now = Time.now.to_i
-    next_due_time = nil
-    shortest_time = nil
+    young_card_due_date = nil
     self.cards.each do |card|
-      due = card.due_date.to_i
-      distance = due - now
-      if shortest_time
-        shortest_time = distance < shortest_time ? distance : shortest_time
-         next_due_time = due if distance < shortest_time
+      if !young_card_due_date
+        young_card_due_date = card.due_date
       else
-        shortest_time = distance
-        next_due_time = due
+        if card.due_date < young_card_due_date
+          young_card_due_date = card.due_date
+        end
       end
     end
-    return next_due_time
+    return young_card_due_date
   end
   
   

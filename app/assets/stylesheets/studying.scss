@@ -19,9 +19,12 @@
   font-weight: bold;
 }
 
+.study-card-view {
+  width: 500px;
+}
+
 .card-view {
   display: flex;
-  max-width: 600px;
   flex-flow: column;
   justify-content: center;
   align-items: center;
@@ -42,10 +45,13 @@
   
 }
 
-.card-back {
-  display: none;
-  transition: display 0.5s;
+.card-front img, 
+.card-back img {
+  display: block;
+  width: 50%;
+  margin: 0 auto;
 }
+
 
 
 
@@ -58,35 +64,47 @@
   font-size: 14px;
 }
 
-.show-answer:hover {
+.study-mode button:hover {
   background: #2A2C2B;
   color: #D9CB9E;
 }
+
+.show-answer {
+  margin: 20px auto;
+}
+
+
+
+// .show-answer:hover {
+//   background: #2A2C2B;
+//   color: #D9CB9E;
+// }
 .answer-buttons h3 {
   font-weight: normal;
+  font-size: 16px;
 }
 .answer-buttons {
-  display: none;
+  display: flex;
   flex-flow: row nowrap;
   justify-content: space-between;
   min-width: 400px;
   
 }
 
-.wrong-answer:hover {
-  background: #2A2C2B;
-  color: #D9CB9E;
-}
-
-.kinda-right-answer:hover {
-  background: #2A2C2B;
-  color: #D9CB9E;
-}
-
-.totally-right:hover {
-  background: #2A2C2B;
-  color: #D9CB9E;
-}
+// .wrong-answer:hover {
+//   background: #2A2C2B;
+//   color: #D9CB9E;
+// }
+// 
+// .kinda-right-answer:hover {
+//   background: #2A2C2B;
+//   color: #D9CB9E;
+// }
+// 
+// .totally-right:hover {
+//   background: #2A2C2B;
+//   color: #D9CB9E;
+// }
 
 
 
@@ -94,4 +112,8 @@
 .reveal{
   display: flex;
     
+}
+
+.hide {
+  display: none;
 }

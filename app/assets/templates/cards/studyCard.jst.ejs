@@ -7,16 +7,16 @@
 
 <button type="button" class="show-answer">Show Answer</button>
 </section>
-<section class="card-back">
+<section class="card-back hide">
   <h3> Back: </h3>
   <p>
     <%= card.escape("back") %><% if (card.escape("back_image_url").length > 3){ %><img src="<%=card.escape('back_image_url')%>" alt="back card image" class-"study-back-image"/><% } %>
   </p>
   
 </section>
-  <section class="answer-buttons">
+  <section class="answer-buttons hide">
     <h3>How did you do?</h3>
-    <button type="button" class="wrong-answer">Wrong Answer</button>
-    <button type="button" class="kinda-right-answer">Kinda Right</button>
-    <button type="button" class="totally-right">Totally Right</button>
+    <button type="button" class="wrong-answer ">Wrong Answer</button>
+    <button type="button" class="kinda-right-answer ">Kinda Right</button>
+    <button type="button" class="totally-right ">Totally Right</button>
   </section>

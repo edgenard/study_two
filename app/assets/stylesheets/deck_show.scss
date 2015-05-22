@@ -30,7 +30,7 @@
 .cards-list {
   display: flex;
   flex-flow: column;
-  overflow: scroll;
+  overflow-x: auto;
   max-height: 500px;
   font-size: 14px;
 }
@@ -54,6 +54,7 @@
 
 .card-info, .card-info-header {
   flex-basis: 25%;
+  text-align: center;
 }
 
 .card-info {
@@ -61,6 +62,8 @@
   overflow: hidden;
   min-height: 50px;
   max-height: 80px;
+  margin: 5px auto;
+
 
 }
 

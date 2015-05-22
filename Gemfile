@@ -51,4 +51,5 @@ group :development do
   gem 'pry-rails'
   gem 'quiet_assets'
   gem 'rename'
+  gem 'byebug'
 end

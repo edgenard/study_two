@@ -40,7 +40,7 @@ StudyTwo.Views.StudyMode = Backbone.View.extend({
     
     card.save({score: 0, streak: streakNow}, {
       success: function (card) {
-        console.log(card);   
+        
       }
     });
     this.collection.push(card)
@@ -55,7 +55,7 @@ StudyTwo.Views.StudyMode = Backbone.View.extend({
     
     card.save({score: 1, streak: streakNow}, {
       success: function (card) {
-        console.log(card);
+    
       },
     });
     if (this.collection.length > 0) {
@@ -74,7 +74,7 @@ StudyTwo.Views.StudyMode = Backbone.View.extend({
   
     card.save({score: 2, streak: streakNow}, {
       success: function (card) {
-        console.log(card);
+         debugger;
       },
     });
     if (this.collection.length > 0) {
