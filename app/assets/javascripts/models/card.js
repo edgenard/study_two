@@ -12,6 +12,7 @@ StudyTwo.Models.Card = Backbone.Model.extend({
     }
     
     return json;
-  }
+  },
+
 
 })

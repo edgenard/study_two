@@ -12,5 +12,8 @@ StudyTwo.Collections.Cards = Backbone.Collection.extend({
     }
     
     return card;
-  }
+  },
+  
+  
+  comparator: "due_date",
 })

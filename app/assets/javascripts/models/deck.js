@@ -27,5 +27,8 @@ StudyTwo.Models.Deck = Backbone.Model.extend({
     }
     return this._dueCards; 
   },
+
+  
+  
   
 })
