@@ -23,6 +23,7 @@ gem 'aws-sdk', '~> 1.6'
 
 gem "omniauth-twitter"
 
+gem 'newrelic_rpm'
 
 group :production do
   gem 'rails_12factor'
