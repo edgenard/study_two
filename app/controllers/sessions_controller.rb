@@ -29,6 +29,16 @@ class SessionsController < ApplicationController
     
   end
   
+  
+  def guest
+    
+    @user = User.find_by_credentials("Guest", "password")
+    
+    login!(@user)
+    redirect_to user_url(@user)
+    
+  end
+  
   private 
   def auth_hash
     request.env["omniauth.auth"]

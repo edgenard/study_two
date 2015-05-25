@@ -2,9 +2,12 @@ StudyTwo::Application.routes.draw do
 
  root "root#root"
  
+ get "sessions/guest", to: "sessions#guest"
+ 
  resources :users
  
  resources :sessions
+ 
  
  namespace :api,  defaults: { format: :json} do
    resources :decks, only: [ :create, :destroy, :index, :show, :update]
