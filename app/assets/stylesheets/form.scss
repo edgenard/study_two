@@ -141,6 +141,17 @@
   color: #D9CB9E;
 }
 
+.form-buttons .delete-button {
+  color: #DC3522;
+  border: 2px solid #DC3522;
+}
+
+.form-buttons .delete-button:hover{
+  background: #DC3522;
+  color: #FFFFF0;
+}
+
+
 .twitter-signin a{
   display: block;
   color: #73f2fc;

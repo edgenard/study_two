@@ -15,7 +15,8 @@ class Deck < ActiveRecord::Base
     
   end
   def next_time_in_words
-    distance_of_time_in_words_to_now(Time.at(get_earliest_time))
+    return "Today" if (get_earliest_time.to_i - Time.now.to_i) < 43200 
+    "in " + distance_of_time_in_words_to_now(Time.at(get_earliest_time))
   end
   
   def next_due_cards

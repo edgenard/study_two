@@ -8,7 +8,7 @@
   <form class="delete-account" action="<%= user_url(current_user)%>" method="post">
     <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
     <input type="hidden" name="_method" value="delete">
-    <button type="submit" > Delete Your Account: Bye Bye Beige <strong>Forever!</strong> </button>
+    <button type="submit" class="delete-button" > Delete Your Account: Bye Bye Beige <strong>Forever!</strong> </button>
     
   </form>
 </div>

@@ -25,6 +25,7 @@ class Card < ActiveRecord::Base
   
   
   def due_date_in_words
+    return "Today" if (self.due_date.to_i - Time.now.to_i) < 43200 
     distance_of_time_in_words_to_now(self.due_date)
   end
   

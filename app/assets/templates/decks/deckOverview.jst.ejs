@@ -8,7 +8,7 @@
          <%= deck.escape("title") %>
         </p>
         <p class="cards-due">
-         <%= deck.dueCards().length %> due in <%= deck.get("next_time_in_words") %>
+         <%= deck.dueCards().length %> due <%= deck.get("next_time_in_words") %>
         </p>
         <a href="#/study/<%=deck.id%>" class="study-deck">Study Now</a>   
       </li>
