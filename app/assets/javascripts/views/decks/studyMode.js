@@ -70,7 +70,7 @@ StudyTwo.Views.StudyMode = Backbone.View.extend({
     event.preventDefault();
     var oldCardView = this.cardView;
     var card = oldCardView.model;
-    var streakNow = card.get("streak") + 3;
+    var streakNow = card.get("streak") + 2;
   
     card.save({score: 2, streak: streakNow}, {
       success: function (card) {
