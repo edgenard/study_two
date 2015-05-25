@@ -95,7 +95,23 @@
 
 .card-form div[contenteditable="true"]:empty:not(:focus):before{
   content:attr(data-ph);
-  color:grey;
+  color:#ccc;
+}
+
+.card-form div[contenteditable="false"],
+.card-form input:disabled,
+.card-form button:disabled{
+  color: #ccc;
+  border-color: #ccc;
+  position: relative;
+}
+
+.card-form button:disabled::after{
+  content: "Saving...";
+  display: block;
+  position: absolute;
+  bottom: -20px;
+  
 }
 
 #card_front:focus,

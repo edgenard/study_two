@@ -156,19 +156,32 @@ StudyTwo.Views.DecksIndex = Backbone.View.extend({
       this.deckShowView.remove();
     }
     var showView = this.deckShowView = new StudyTwo.Views.DeckShow({model: deck});
-    
-    
+    var cardForm = this.cardFormView;
+    this.disableFormInputs(cardForm.$el);
     card.save(cardData, {
       success: function (card) { 
-        showView && deck.cards().add(card);
-        showView && that.$el.find(".form-space").html(showView.render().$el)
+        deck.cards().add(card);
+        that.$el.find(".form-space").html(showView.render().$el)
         collection.fetch();
         that.cardFormView.remove();
       },
       error: function (card) {
         console.log(card);
+        this.enableFormInputs(cardForm.$el);
       }
     })
+  },
+  
+  disableFormInputs: function ($form) {
+    $form.find("input").attr("disabled", "disabled");
+    $form.find("button").attr("disabled", "disabled");
+    $form.find("div").attr("contenteditable", "false");
+  },
+  
+  enableFormInputs: function ($form) {
+    $form.find("input").removeAttr("disabled");
+    $form.find("button").removeAttr("disabled");
+    $form.find("div").attr("contenteditable", "true");
   },
   
   
