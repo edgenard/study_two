@@ -6,13 +6,14 @@ class Deck < ActiveRecord::Base
   has_many :cards, dependent: :destroy
   
   def average_score
+    return 0 if self.cards.length < 1
     total_score = 0
     self.cards.each do |card|
       total_score += card.score
     end
     
-    ((total_score.to_f / self.cards.length) * 100.0).round / 100.0
     
+    ((total_score.to_f / self.cards.length) * 100.0).round / 100.0  
   end
   def next_time_in_words
     return "Today" if (get_earliest_time.to_i - Time.now.to_i) < 43200 
