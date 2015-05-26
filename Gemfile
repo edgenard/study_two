@@ -25,6 +25,8 @@ gem "omniauth-twitter"
 
 gem 'newrelic_rpm'
 
+gem "autoprefixer-rails"
+
 group :production do
   gem 'rails_12factor'
 end

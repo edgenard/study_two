@@ -16,7 +16,8 @@ id          | integer   | not null, primary key
 deck_id     | integer   | not null, foreign key (references deck)
 front       | text      | not null
 back        | text      | not null
-score       | integer   | not null
+score       | integer   | not null 
+streak      | integer   | not null
 
 
 
@@ -26,8 +27,14 @@ column name     | data type | details
 id              | integer   | not null, primary key
 email           | string    | not null, unique
 password_digest | string    | not null
-session_token   | string    | not null, unique
 
+
+## sessions
+column name     | data type | details
+----------------|-----------|-----------------------
+id              | integer   | not null, primary key
+user_id         | integer   | not null
+session_token   | string    | not null
 
 
 

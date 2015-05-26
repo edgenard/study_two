@@ -1,8 +1,8 @@
-# StudyTwo
+# StudyBeige
 
 [Heroku link][heroku]
 
-[heroku]: https://studytwo.herokuapp.com/
+[heroku]: https://studybeige.space/
 
 ## Minimum Viable Product
 StudyTwo is a clone of StudyBlue built on Rails and Backbone. :
@@ -14,10 +14,10 @@ Users can:
 - [x] Edit account information
 - [x] Create sessions (log in)
 - [x] Delete sessions(log out)
-- [ ] Create decks of flashcards.
-- [ ] View and Edit flashcards.
-- [ ] Study flashcards
-- [ ] See their stats on each flashcard and on each deck 
+- [x] Create decks of flashcards.
+- [x] View and Edit flashcards.
+- [x] Study flashcards
+- [x] Study Flashcards using spaced repetition 
 
 
 
@@ -27,10 +27,12 @@ Users can:
 __Mockups TODO__
 - [x] Change student dashboard to learner dashboard
 - [x] Make new_user and user dashboard mockups
-- [ ] Deck creation form view
-- [ ] Flashcard creation form view
+- [x] Deck creation form view
+- [x] Flashcard creation form view
+- [x] Deck show view
+- [ ] Study view before and after answering
 
-* [DB schema][schema] __Unfinished__
+* [DB schema][schema] 
 
 __Schema TODO__ 
 - [x] User db schema
