@@ -24,17 +24,15 @@ Users can:
 ## Design Docs
 * [View Wireframes][views] __Unfinished__
 
-__Mockups TODO__
-- [x] Change student dashboard to learner dashboard
 - [x] Make new_user and user dashboard mockups
 - [x] Deck creation form view
 - [x] Flashcard creation form view
 - [x] Deck show view
-- [ ] Study view before and after answering
+- [x] Study view before and after answering
 
 * [DB schema][schema] 
 
-__Schema TODO__ 
+ 
 - [x] User db schema
 - [x] Deck db schema
 - [x] Flashcard db schema
@@ -55,55 +53,36 @@ Heroku to get a live version to make sure all of the user authentication is work
 
 [Details][phase-one]
 
-### Phase 2: Starting Backbone with Deck and FlashCard creation   (~2 days)
+### Phase 2: Starting Backbone with Deck and FlashCard creation   (~3 days)
 I will set up the deck model and flashcard model and the appropriate associations to
 users. I will add API routes to allow students and teachers to create decks
-of flashcard with with a rich text editor thanks to the
-[jWYSISWYG][https://github.com/akzhan/jwysiwyg]. They will also be able to see the decks
+of flashcard. They will also be able to see the decks
 of flashcards they have created on their dashboard. And to edit deck details and flashcard details.
 
-__Details unfinihshed__
+
 [Details][phase-two]
 
-### Phase 3: Studying flashcards and stats (~3 days)
-I will add the ability for students to study the flashcards by showing them one side. When
-the card is "flipped" over I will ask them to rate how to they did on a scale of 1 to 5.
-Based on their answer I will will change the order of the flashcards based on a spaced
-repetition algorithm. This will make it so that things a student knows well will show up
-less frequently than the things they need to work on. Each time a student visits their
-dashboard they will be able notified of the things they need to work on. When a student
-finishes a study session they will be shown the stats for that session. Stats for a
-flashcard session will be a bar graph thats show the distribution of their answers, how
-long they have been studying and the number of consecutive days they have studied. Tutors
-will also be able to see the stats of each student.
+### Phase 3: Add styles and picture uploads to cards (~2 days)
+I will create an overall design for the site to help users navigate and use it.  I will add picture uploads using the paperclip gem, figaro gem and an Amazon S3 bucket.
 
 
 [Details][phase-three]
 
-### Phase 4: Quizzes and Quiz stats (~2 days)
-When a tutor decides to create a quiz they will be given the option to create one based on
-a set of flash cards which will populate the questions based on the flashcards. The tutor
-will then be able to go through each question on the quiz editing them and  deciding
-whether to make them fill-in(default) or multiple choice. They will also be able to add
-more questions. Quizzes can also be created from a blank slate. Tutors will assign quizzes
-to students. A quiz can have a time limit. When a student visits their dashboard they will
-be able to see if they have any quizzes assigned, how many questions the quiz has and how
-long they have to take it. Once they've taken it they will see be shown the number right
-and the number wrong. The tutor will be able to see each students stats on each quiz
-they've taken.
+### Phase 4: Add ability to study cards and score them (~1 days)
+I will add view in Backbone to allow users to study the cards and score them. 
 
 [Details][phase-four]
 
-### Phase 5: Activity History (~1 days)
-Each student will have the ability to see how they are doing on a topic over time. They
-will be able to see how many days they've worked and for how long. They'll be able to earn
-badges and or points for being consistent and disciplined in the work.
+### Phase 5: Add spaced repetition (~2 days)
+I will implement a spaced repetition algorithm that breaks up the studying of each deck overtime. This will allow the user space out their review to more effectively learn the materials. This will require updates to the deck model and card model on the server side. 
 
 [Details][phase-five]
 
 ### Bonus Features (TBD)
 - [ ] Add page explaining spaced repetition. Link to it from footer.
 - [ ] Add static pages, About and Contact
+- [ ] Add ability for users to be tutors and have a class of students
+- [ ] Add ability of tutors share decks with students in their class and track their progress.
 - [ ] Study sessions with tutor and one or more students over webRTC with a shared whiteboard.
 - [ ] Students can take a quiz during a study session.
 - [ ] Ability to drag in quiz problems that students got wrong from past quizzes during study session.
