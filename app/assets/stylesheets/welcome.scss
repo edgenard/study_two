@@ -15,11 +15,10 @@
 .welcome-message > h1 {
   font-size: 72px;
   color: #2A2C2B;
-  margin: 20px auto;
+  margin: 85px auto 20px auto;
 }
-
 .welcome-message > h2 {
-  font-size: 36px;
+  font-size: 24px;
   background:#2A2C2B;
   color: #D9CB9E;
 }
@@ -56,29 +55,45 @@
   width: 840px;
   justify-content: center;
   margin: 0 auto;
-  flex-flow: column;
-  background: #2A2C2B;
-  color: #D9CB9E;
+  flex-flow: row wrap;
+  color: #2A2C2B;
   padding: 30px;
+
 }
 
-.flash-copy > h2 {
+
+.flash-copy-article {
+  display: flex;
+  flex-flow: column;
+  width: 380px;
+  padding: 10px;
+
+}
+
+.flash-copy-article  h2 { 
   font-size: 24px;
-  width: 400px;
-  margin: 20px auto;
+  margin: 20px 0px;
   
 }
 
-.flash-copy > p {
+
+.feature-list {
+  list-style-type: lower-alpha;
+  list-style-position: inside; 
   font-size: 16px;
-  width: 400px;
-  margin: 0 auto;
+
 }
 
-.flash-copy > p > em {
-  background: #D9CB9E;
-  color: #2A2C2B;
+.number-list {
+  list-style-type: decimal;
 }
+
+.feature-list li {
+  padding: 10px 0px;
+
+}
+
+
 
 .flash-copy >.sign-up-btn {
   width: 160px;
