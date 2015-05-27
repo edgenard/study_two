@@ -1,5 +1,5 @@
 class RootController < ApplicationController
-  click Show Answer to rate how you did
+  before_action :check_currentuser
   def root
     render :welcome
   end
