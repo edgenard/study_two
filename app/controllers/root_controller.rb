@@ -1,12 +1,12 @@
 class RootController < ApplicationController
-  before_action :check_currentuser
+  click Show Answer to rate how you did
   def root
     render :welcome
   end
   
   private 
   def check_currentuser
-    redirect_to user_url(current_user) if current_user
+    redirect_to study_space_url if current_user
   end
   
 end
