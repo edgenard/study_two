@@ -1,20 +1,29 @@
-# Phase 4: User Feeds
+# Phase 4: Study Cards and Score. Twitter Login.
 
 ## Rails
 ### Models
+- [x] Deck 
+  * Add method to get the average score of the bugs. 
+
+- [x] User
+  * Add uid and provider columns to table to enable twitter login
 
 ### Controllers
-Api::PostsController (feed)
+- [x] Update users controller to allow twitter login. 
 
 ### Views
-posts/feed.json.jbuilder
+- [x] Update sign in and sign up `erb` templates to allow twitter login. 
+
 
 ## Backbone
 ### Models
 
 ### Collections
+  
 
 ### Views
-* FeedShow (composite view, contains PostsIndex subview)
+- [x] Create study view and route to it from user dashboard. 
+
 
 ## Gems/Libraries
+* OmniAuth Twitter

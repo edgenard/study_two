@@ -6,7 +6,7 @@ class UsersController < ApplicationController
     @user = User.new(user_params)
     if @user.save
       login!(@user)
-      redirect_to user_url(@user)
+      redirect_to study_space_url
     else
       flash.now[:errors] = @user.errors.full_messages
       render :new
@@ -19,13 +19,13 @@ class UsersController < ApplicationController
   end
   
   def show
-    @user = User.find(params[:id])
+    @user = current_user
     render :show
   end
   
   
   def edit
-    @user = User.find(params[:id])
+    @user = current_user
     render :edit
   end
   
@@ -53,14 +53,12 @@ class UsersController < ApplicationController
   end
   
   def require_login
-    unless logged_in? && right_user
+    unless logged_in? 
       flash[:notice] = "You must be logged in as the right user do this!"
       redirect_to new_session_url
     end
   end
   
-  def right_user
-    current_user.id == (params[:id]).to_i
-  end
+
   
 end

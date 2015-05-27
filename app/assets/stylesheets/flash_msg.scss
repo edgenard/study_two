@@ -30,3 +30,16 @@
   color: #DC3522;
   background: #FFFDD0 ;
 }
+
+
+.card-form .error, 
+.deck-form .error {
+  border-top: 1px solid #DC3522;
+  margin-bottom: 5px; 
+}
+
+.card-form .flash-msg-item,
+.deck-form .flash-msg-item {
+  width: 200px;
+  padding: 10px;
+}

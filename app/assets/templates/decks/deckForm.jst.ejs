@@ -1,3 +1,14 @@
+<% if (errors) {  %>
+  <section class="flash-msg">
+    <ul class="flash-msg-list">
+      <% errors.forEach(function(msg){ %>
+        <li class="flash-msg-item error">
+          <%= msg %>
+        </li>
+      <% }) %>
+    </ul>    
+  </section>
+<% } %>
 <a href="#" class="close-form">X</a>
 <h2> <%= deck.isNew() ? "New Deck" : "Edit Deck" %> </h2>
 <label for="deck_title">Title: </label>

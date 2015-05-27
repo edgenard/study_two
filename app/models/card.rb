@@ -1,5 +1,6 @@
 class Card < ActiveRecord::Base
   include ActionView::Helpers::DateHelper
+  
   has_attached_file :front_image, default_url: nil,  :styles => { :study => "265x115" ,:medium => "175x75", :thumb => " 50x50" }
   validates_attachment_content_type :front_image, :content_type => /\Aimage\/.*\Z/
   
@@ -29,6 +30,18 @@ class Card < ActiveRecord::Base
     distance_of_time_in_words_to_now(self.due_date)
   end
   
+  def has_front
+    unless !front.blank? || !front_image.blank?
+      errors.add(:front, "Front can't be blank");
+    end
+  end
+  
+  def has_back
+    unless !back.blank? || !back_image.blank?
+      errors.add(:back, "Back can't be blank")
+    end
+  end
+  
   private
   def default_score
     self.score ||= 0
@@ -42,15 +55,4 @@ class Card < ActiveRecord::Base
     self.due_date = Time.at(Time.now.to_i + (86400 * self.streak * self.score))
   end
   
-  def has_front
-    unless front || front_image
-      errors.add(:front, "Front can't be blank");
-    end
-  end
-  
-  def has_back
-    unless back || back_image
-      errors.add(:back, "Back can't be blank")
-    end
-  end
 end

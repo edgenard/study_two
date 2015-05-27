@@ -22,7 +22,7 @@ Users can:
 
 
 ## Design Docs
-* [View Wireframes][views] __Unfinished__
+* [View Wireframes][views] 
 
 - [x] Make new_user and user dashboard mockups
 - [x] Deck creation form view
@@ -45,35 +45,40 @@ Users can:
 ### Phase 1: User Authentication and dashboard (~1 day)
 I will implement user authentication in Rails based on the practices learned at
 App Academy. By the end of this phase students will be able to sign up,
-sign in, sign out and destroy their accounts. I will also add the ability for users to
-destroy their accounts. I will also be setting the associations between students, tutors
-and study groups. Once a user has created an account they will be redirected to their
-dashboard which is where the Backbone app will be initialized. I will then push the app to
-Heroku to get a live version to make sure all of the user authentication is working.
+sign in, sign out and destroy their accounts. I will also add the ability for
+users to destroy their accounts.  Once a user has created an account they will
+be redirected to their dashboard which is where the Backbone app will be
+initialized. I will then push the app to Heroku to get a live version to make
+sure all of the user authentication is working.
 
 [Details][phase-one]
 
-### Phase 2: Starting Backbone with Deck and FlashCard creation   (~3 days)
-I will set up the deck model and flashcard model and the appropriate associations to
-users. I will add API routes to allow students and teachers to create decks
-of flashcard. They will also be able to see the decks
-of flashcards they have created on their dashboard. And to edit deck details and flashcard details.
+### Phase 2: Creating, Editing, Viewing Decks and Cards   (~3 days)
+I will set up the deck model and flashcard model and the appropriate
+associations to users. I will add API routes to allow users to
+create decks of flashcard. I write a jbuilder view for that will send all the
+information about decks of a user once they have logged in to a user show page.
+I will also add the Backbone models and collections for decks and cards. Along with a Backbone router to navigate around the app. I will need to add Backbone 
+views to show the users dashboard, to create a deck, to create a card and to show information about a deck. 
 
 
 [Details][phase-two]
 
-### Phase 3: Add styles and picture uploads to cards (~2 days)
-I will create an overall design for the site to help users navigate and use it.  I will add picture uploads using the paperclip gem, figaro gem and an Amazon S3 bucket.
+### Phase 3: Styling and Picture Uploads (~2 days)
+I will create an overall design for the site to help users navigate and use it.
+I will add picture uploads using the paperclip gem, figaro gem and an Amazon S3
+bucket.
 
 
 [Details][phase-three]
 
-### Phase 4: Add ability to study cards and score them (~1 days)
-I will add view in Backbone to allow users to study the cards and score them. 
+### Phase 4: Add ability to study cards and score them. Add Twitter Login (~1 days)
+I will add view in Backbone to allow users to study the cards and score them.
+I will use the omniauth twitter gem to allow users to create an account and login through twitter.  
 
 [Details][phase-four]
 
-### Phase 5: Add spaced repetition (~2 days)
+### Phase 5: Spaced repetition and multiple sessions (~2 days)
 I will implement a spaced repetition algorithm that breaks up the studying of each deck overtime. This will allow the user space out their review to more effectively learn the materials. This will require updates to the deck model and card model on the server side. 
 
 [Details][phase-five]

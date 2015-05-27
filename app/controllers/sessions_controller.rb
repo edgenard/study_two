@@ -5,7 +5,7 @@ class SessionsController < ApplicationController
                  params[:user][:password])
     if @user
       login!(@user)
-      redirect_to user_url(@user)
+      redirect_to study_space_url
     else
       flash.now[:errors] = ["Bad email/password combination"]
       render :new
@@ -25,7 +25,7 @@ class SessionsController < ApplicationController
   def twitter_signin
     @user = User.find_or_create_by_auth(auth_hash)
     login!(@user)
-    redirect_to user_url(@user)
+    redirect_to study_space_url
     
   end
   
@@ -35,7 +35,7 @@ class SessionsController < ApplicationController
     @user = User.find_by_credentials("Guest", "password")
     
     login!(@user)
-    redirect_to user_url(@user)
+    redirect_to study_space_url
     
   end
   

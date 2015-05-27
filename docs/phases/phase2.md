@@ -1,4 +1,4 @@
-# Phase 2: Viewing Blogs and Posts
+# Phase 2: Creating, Editing, Viewing Decks and Cards
 
 ## Rails
 ### Models with associations
@@ -10,7 +10,7 @@
     
 
 ### Controllers
-- [x] Api::DeckController (~~create~~, ~~destroy~~, ~~update~~, ~~index~~)
+- [x] Api::DeckController (create, destroy, update, index)
 - [x] Api::FlashCardController (create, destroy, show, update)
 
 ### Views
@@ -24,19 +24,17 @@
 
 
 ### Collections
-- [x] Decks(used to make dashboard view)
+- [x] Decks
 - [x] Cards
 
 ### Routers
 - [x] app Router
 
 ### Views
-- [ ] StudyDeck(user_show page )
-  
+- [x] User Dashboard (user_show page )  
 - [x] DeckForm(to create or edit decks)
 - [x] CardForm(to create or edit cards)
-- [ ] DeckShow (Shows deck details and lists cards)
-- [ ] CardsIndex( Subview of DeckShow)
+- [x] DeckShow (Shows deck details and lists cards)
+
 
 ## Gems/Libraries
-* [jWYSISWYG][https://github.com/akzhan/jwysiwyg] to allow rich text editing in inputs 

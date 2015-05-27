@@ -6,11 +6,12 @@ StudyTwo.Views.CardForm = Backbone.View.extend({
     this.deck = options.deck
     this.collection = options.collection
     this.listenTo(this.model, "sync", this.render);
-    
+    this.errors = false
   },
   
   render: function () {
-    var content = this.template({card: this.model, deck: this.deck});
+    var content = this.template({card: this.model, 
+      deck: this.deck, errors: this.errors});
     this.$el.html(content);
     return this;
   },
