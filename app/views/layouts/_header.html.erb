@@ -7,6 +7,11 @@
     <ul>
       <% if logged_in? %>
       <li> 
+        <a href="<%=study_space_url%>">
+          Study Space
+        </a> 
+      </li>
+      <li> 
         <a href="<%=edit_user_url(current_user)%>">
           <%= current_user.name %>'s Profile
         </a> 
