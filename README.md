@@ -47,40 +47,8 @@ This project provided several interesting problems:
   * This still required several changes throughout the whole stack from the DB to the front-end. 
   * Making due-dates human friendly.
 
-__ToDo__
-### Deck-making to Card-making (Fun)
-* Parsing payload from server
 
-#### Adding pictures to cards.
-* Custom Validation
-* Change strong params
-* Changing To JSON
-* Using paperclip, setting up Amazon S3
-
-### The Study Space (Funner)
-
-#### Which View
-* Composite View
-* All individual views using router
-* Mix because wanted to minimize interacting with things that were not the main focus of app (studying the cards) and wanted to keep track of all collections. 
-
-#### Studying
-* Only other use of backbone router
-* Study collection of cards on client and server
-	* Parse payload again
-* Go through each card using pop to render a studyView for the cards.
-* Handle scoring, and wrong answers
-
-### Space Repetition (Funnest)
-* Other algorithms
-* Change in Card table in DB and several different model methods.
-* Calculate next due date. 
-* After update call back
-* Calculate time by seconds from Epoch
-* Present in human readable way on the front end. 
-* Target for refinement and many iteration.
-
-### DB Schema and Wireframes (not so fun)
+## DB Schema and Wireframes 
 
 * [DB Schema](docs/schema.md) 
 * [Wireframes](docs/views.md)
