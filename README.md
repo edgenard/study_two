@@ -61,7 +61,7 @@ This project provided several interesting problems:
 - [ ] Add ability to search for cards, decks and users.
 - [ ] Tutors can assign decks to students and write and assign quizzes. 
 - [ ] Create multiple choice flashcards. 
-- [ ] Study Sessions between uses using WebRTC   
+- [ ] Study Sessions between users using WebRTC   
 
 
 

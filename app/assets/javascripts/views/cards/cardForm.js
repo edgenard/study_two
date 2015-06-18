@@ -3,10 +3,10 @@ StudyTwo.Views.CardForm = Backbone.View.extend({
   tagName: "form",
   className: "form card-form",
   initialize: function (options) {
-    this.deck = options.deck
-    this.collection = options.collection
+    this.deck = options.deck;
+    this.collection = options.collection;
     this.listenTo(this.model, "sync", this.render);
-    this.errors = false
+    this.errors = false;
   },
   
   render: function () {
@@ -34,7 +34,7 @@ StudyTwo.Views.CardForm = Backbone.View.extend({
       reader.readAsDataURL(file);
     } else {
       that._previewFront("");
-      delete that.model.front_image;
+      delete this.model.front_image;
     }
     
   },
@@ -53,7 +53,7 @@ StudyTwo.Views.CardForm = Backbone.View.extend({
       reader.readAsDataURL(file);
     } else {
       that._previewBack("");
-      delete that.model.back_image;
+      delete this.model.back_image;
     }
   },
   
@@ -81,4 +81,4 @@ StudyTwo.Views.CardForm = Backbone.View.extend({
   }
 
   
-})
+});
