@@ -15,4 +15,4 @@ StudyTwo.Models.Card = Backbone.Model.extend({
   },
 
 
-})
+});
