@@ -56,3 +56,8 @@ group :development do
   gem 'rename'
   gem 'byebug'
 end
+
+group :development, :test do
+  gem 'simplecov', require: false
+  gem 'rspec-rails'
+end
