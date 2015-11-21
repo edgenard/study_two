@@ -3,7 +3,7 @@ require 'rails_helper'
 RSpec.feature "Signups", type: :feature do
 
   describe "valid signup" do
-    scenario "sign up with valid email and password" do
+    scenario "valid email and password" do
       visit  "/"
       click_link "Sign Up Now!"
       fill_in "user[email]", with: "user@example.com"
@@ -17,7 +17,7 @@ RSpec.feature "Signups", type: :feature do
 
 
  describe "invalid signups" do
-   scenario " password that is too short" do
+   scenario "password that is too short" do
      visit "/"
      click_link "Sign Up Now!"
      fill_in "user[email]", with: "user@example.com"
