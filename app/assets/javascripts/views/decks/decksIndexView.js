@@ -87,7 +87,12 @@ StudyTwo.Views.DecksIndex = Backbone.View.extend({
       deck = this.deckFormView.model;
     } else {
       deck = this.deckShowView.model;
+        //Quick and dirty validation
+        //TODO: Write better validation, need to check if blank
+      if (deckData.title.length <= 1) return;
     }
+
+
     deck.set("user_id", this.userId);
     
     var collection = this.collection;
