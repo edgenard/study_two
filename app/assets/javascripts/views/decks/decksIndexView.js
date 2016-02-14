@@ -107,7 +107,7 @@ StudyTwo.Views.DecksIndex = Backbone.View.extend({
       error: function (deck, response) {
         that.deckFormView.errors = response.responseJSON;
         that.deckFormView.render();
-      },
+      }
       
     });
     
