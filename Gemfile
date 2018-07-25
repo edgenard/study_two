@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 ruby "2.5.0"
 gem 'rails'
-gem 'pg'
+gem 'pg', '~> 0.21'
 
 gem 'sass-rails'
 gem 'uglifier', '>= 1.3.0'
@@ -61,6 +61,7 @@ group :development, :test do
   gem 'simplecov', require: false
   gem 'rspec-rails'
   gem 'capybara'
+  gem 'puma'
   gem 'launchy'
   gem 'selenium-webdriver'
   gem 'database_cleaner'

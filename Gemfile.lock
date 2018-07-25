@@ -141,13 +141,14 @@ GEM
       mime-types
       mimemagic (~> 0.3.0)
       terrapin (~> 0.6.0)
-    pg (1.0.0)
+    pg (0.21.0)
     pry (0.11.3)
       coderay (~> 1.1.0)
       method_source (~> 0.9.0)
     pry-rails (0.3.6)
       pry (>= 0.10.4)
     public_suffix (3.0.2)
+    puma (3.12.0)
     quiet_assets (1.1.0)
       railties (>= 3.1, < 5.0)
     rack (1.6.10)
@@ -273,8 +274,9 @@ DEPENDENCIES
   newrelic_rpm
   omniauth-twitter
   paperclip
-  pg
+  pg (~> 0.21)
   pry-rails
+  puma
   quiet_assets
   rails
   rails_12factor
