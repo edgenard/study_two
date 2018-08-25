@@ -21,18 +21,16 @@ RSpec.feature "Cards", type: :feature do
     create_user
   end
 
-  xscenario "add card to deck" do
+  scenario "add card to deck" do
     create_deck
     click_link "Edit Deck"
 
     click_button "Add Card"
     card_front = find("#card_front")
     card_front.set("Front")
-    puts card_front.text == "Front"
 
     card_back = find("#card_back")
     card_back.set("Back")
-    puts card_back.text == "Back"
 
     click_button "Save and Close"
 

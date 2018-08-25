@@ -32,7 +32,10 @@ class SessionsController < ApplicationController
   
   def guest
     
-    @user = User.find_by_credentials("Guest", "password")
+    @user = User.find_by(email:"guest@example.com")
+    if @user.nil?
+      @user = User.create(email:"guest@example.com", password: 'password')
+    end
     
     login!(@user)
     redirect_to study_space_url
