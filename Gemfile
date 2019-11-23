@@ -1,14 +1,14 @@
 source 'https://rubygems.org'
-ruby "2.5.0"
+ruby "2.6.2"
 gem 'rails'
-gem 'pg', '~> 0.21'
+gem 'pg', "~>0.21"
 
 gem 'sass-rails'
-gem 'uglifier', '>= 1.3.0'
+gem 'uglifier'
 
 gem 'jquery-rails'
 
-gem 'jbuilder', '~> 1.2'
+gem 'jbuilder'
 gem 'bcrypt'
 
 gem 'unicorn'
