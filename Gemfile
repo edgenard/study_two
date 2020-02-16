@@ -11,8 +11,6 @@ gem 'jquery-rails'
 gem 'jbuilder'
 gem 'bcrypt'
 
-gem 'unicorn'
-
 gem 'backbone-on-rails'
 
 gem "paperclip"
