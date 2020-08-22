@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class CreateDecks < ActiveRecord::Migration
   def change
     create_table :decks do |t|

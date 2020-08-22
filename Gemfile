@@ -1,41 +1,40 @@
-source 'https://rubygems.org'
+# frozen_string_literal: true
+
+source "https://rubygems.org"
 ruby "2.6.2"
-gem 'rails'
-gem 'pg', "~>0.21"
+gem "pg", "~>0.21"
+gem "rails"
 
-gem 'sass-rails'
-gem 'uglifier'
+gem "sass-rails"
+gem "uglifier"
 
-gem 'jquery-rails'
+gem "jquery-rails"
 
-gem 'jbuilder'
-gem 'bcrypt'
+gem "bcrypt"
+gem "jbuilder"
 
-gem 'backbone-on-rails'
+gem "backbone-on-rails"
 
 gem "paperclip"
 
 gem "figaro"
 
-gem 'aws-sdk-s3'
+gem "aws-sdk-s3"
 
 gem "omniauth-twitter"
 
-gem 'newrelic_rpm'
+gem "newrelic_rpm"
 
 gem "autoprefixer-rails"
 
 group :production do
-  gem 'rails_12factor'
+  gem "rails_12factor"
 end
 
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
-  gem 'sdoc', require: false
+  gem "sdoc", require: false
 end
-
-
-
 
 # Use unicorn as the app server
 # gem 'unicorn'
@@ -47,20 +46,20 @@ end
 # gem 'debugger', group: [:development, :test]
 
 group :development do
-  gem 'better_errors'
-  gem 'binding_of_caller'
-  gem 'pry-rails'
-  gem 'quiet_assets'
-  gem 'rename'
-  gem 'byebug'
+  gem "better_errors"
+  gem "binding_of_caller"
+  gem "byebug"
+  gem "pry-rails"
+  gem "quiet_assets"
+  gem "rename"
 end
 
 group :development, :test do
-  gem 'simplecov', require: false
-  gem 'rspec-rails'
-  gem 'capybara'
-  gem 'puma'
-  gem 'launchy'
-  gem 'selenium-webdriver'
-  gem 'database_cleaner'
+  gem "capybara"
+  gem "database_cleaner"
+  gem "launchy"
+  gem "puma"
+  gem "rspec-rails"
+  gem "selenium-webdriver"
+  gem "simplecov", require: false
 end

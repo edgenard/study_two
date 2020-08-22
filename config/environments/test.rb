@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 StudyTwo::Application.configure do
   # Settings specified here will take precedence over those in config/application.rb.
 
@@ -13,11 +15,11 @@ StudyTwo::Application.configure do
   config.eager_load = false
 
   # Configure static asset server for tests with Cache-Control for performance.
-  config.serve_static_assets  = true
+  config.serve_static_assets = true
   config.static_cache_control = "public, max-age=3600"
 
   # Show full error reports and disable caching.
-  config.consider_all_requests_local       = true
+  config.consider_all_requests_local = true
   config.action_controller.perform_caching = false
 
   # Raise exceptions instead of rendering exception templates.

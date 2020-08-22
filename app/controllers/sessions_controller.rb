@@ -1,8 +1,11 @@
+# frozen_string_literal: true
+
 class SessionsController < ApplicationController
   def create
     @user = User.find_by_credentials(
-                 params[:user][:email],
-                 params[:user][:password])
+      params[:user][:email],
+      params[:user][:password]
+    )
     if @user
       login!(@user)
       redirect_to study_space_url
@@ -21,30 +24,26 @@ class SessionsController < ApplicationController
     logout!
     redirect_to new_session_url
   end
-  
+
   def twitter_signin
     @user = User.find_or_create_by_auth(auth_hash)
     login!(@user)
     redirect_to study_space_url
-    
   end
-  
-  
+
   def guest
-    
-    @user = User.find_by(email:"guest@example.com")
+    @user = User.find_by(email: "guest@example.com")
     if @user.nil?
-      @user = User.create(email:"guest@example.com", password: 'password')
+      @user = User.create(email: "guest@example.com", password: "password")
     end
-    
+
     login!(@user)
     redirect_to study_space_url
-    
   end
-  
-  private 
+
+  private
+
   def auth_hash
     request.env["omniauth.auth"]
   end
-  
 end

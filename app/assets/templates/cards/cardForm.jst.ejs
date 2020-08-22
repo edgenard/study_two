@@ -6,7 +6,7 @@
           <%= msg %>
         </li>
       <% }) %>
-    </ul>    
+    </ul>
   </section>
 <% } %>
 <a href="#" class="close-form">X</a>
@@ -16,15 +16,20 @@
 <% } %>
 <label for="card_front">Front:</label>
 <input type="file" id="front-image">
-  <div id="card_front" contenteditable="true" data-ph="Type in the front of your card here you can also add a picture by choosing a file above ↑"><%= card.escape("front") %><% if (card.escape("front_image_url").length > 3){ %><img src="<%=card.escape('front_image_url')%>" alt="front card image"/><% } %></div>
+  <div id="card_front" contenteditable="true" data-ph="Type in the front of your card here you can also add a picture by choosing a file above ↑">
+    <%= card.escape("front") %>
+    <% if (card.escape("front_image_url").length > 3){ %>
+    <img src="<%=card.escape('front_image_url')%>" alt="front card image"/>
+    <% } %>
+  </div>
 
-  
-<label for="card_back">Back:</label> 
+
+<label for="card_back">Back:</label>
 <input type="file" name="card[back_image]" id="back-image">
   <div id="card_back" contenteditable="true" data-ph="Type in the back of your card here you can also add a picture by choosing a file above ↑"><%= card.escape("back") %><% if (card.escape("back_image_url").length > 3){ %><img src="<%=card.escape('back_image_url')%>" alt="back card image"/><% } %></div>
 
 <div class="form-buttons">
   <button class="add-more">Save and Make More</button>
-  
-  <button class="card-done">Save and Close</button>   
+
+  <button class="card-done">Save and Close</button>
 </div>

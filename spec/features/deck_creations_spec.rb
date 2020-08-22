@@ -1,7 +1,9 @@
-require 'rails_helper'
+# frozen_string_literal: true
+
+require "rails_helper"
 
 RSpec.feature "DeckCreations", type: :feature do
-  let (:create_user) do
+  let(:create_user) do
     visit "/users/new"
     fill_in "user[email]", with: "decks@example.com"
     fill_in "user[password]", with: "password"

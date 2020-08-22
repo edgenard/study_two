@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class AddAttachmentBackImageToCards < ActiveRecord::Migration
   def self.up
     change_table :cards do |t|

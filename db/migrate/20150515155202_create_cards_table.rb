@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class CreateCardsTable < ActiveRecord::Migration
   def change
     create_table :cards do |t|
@@ -6,6 +8,5 @@ class CreateCardsTable < ActiveRecord::Migration
       t.text :back, null: false
       t.integer :score, null: false
     end
-    
   end
 end

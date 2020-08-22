@@ -1,4 +1,5 @@
-# encoding: UTF-8
+# frozen_string_literal: true
+
 # This file is auto-generated from the current state of the database. Instead
 # of editing this file, please use the migrations feature of Active Record to
 # incrementally modify your database, and then regenerate this schema definition.
@@ -11,52 +12,50 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150525190700) do
-
+ActiveRecord::Schema.define(version: 20_150_525_190_700) do
   # These are extensions that must be enabled in order to support this database
-  enable_extension "plpgsql"
+  enable_extension 'plpgsql'
 
-  create_table "cards", force: :cascade do |t|
-    t.integer  "deck_id",                  null: false
-    t.text     "front",                    null: false
-    t.text     "back",                     null: false
-    t.integer  "score",                    null: false
-    t.string   "front_image_file_name"
-    t.string   "front_image_content_type"
-    t.integer  "front_image_file_size"
-    t.datetime "front_image_updated_at"
-    t.string   "back_image_file_name"
-    t.string   "back_image_content_type"
-    t.integer  "back_image_file_size"
-    t.datetime "back_image_updated_at"
-    t.integer  "streak"
-    t.datetime "due_date"
+  create_table 'cards', force: :cascade do |t|
+    t.integer  'deck_id',                  null: false
+    t.text     'front',                    null: false
+    t.text     'back',                     null: false
+    t.integer  'score',                    null: false
+    t.string   'front_image_file_name'
+    t.string   'front_image_content_type'
+    t.integer  'front_image_file_size'
+    t.datetime 'front_image_updated_at'
+    t.string   'back_image_file_name'
+    t.string   'back_image_content_type'
+    t.integer  'back_image_file_size'
+    t.datetime 'back_image_updated_at'
+    t.integer  'streak'
+    t.datetime 'due_date'
   end
 
-  create_table "decks", force: :cascade do |t|
-    t.string   "title",       null: false
-    t.text     "description"
-    t.integer  "user_id",     null: false
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
+  create_table 'decks', force: :cascade do |t|
+    t.string   'title', null: false
+    t.text     'description'
+    t.integer  'user_id',     null: false
+    t.datetime 'created_at',  null: false
+    t.datetime 'updated_at',  null: false
   end
 
-  create_table "sessions", force: :cascade do |t|
-    t.integer "user_id",       null: false
-    t.string  "session_token", null: false
+  create_table 'sessions', force: :cascade do |t|
+    t.integer 'user_id',       null: false
+    t.string  'session_token', null: false
   end
 
-  add_index "sessions", ["user_id", "session_token"], name: "index_sessions_on_user_id_and_session_token", using: :btree
+  add_index 'sessions', %w[user_id session_token], name: 'index_sessions_on_user_id_and_session_token', using: :btree
 
-  create_table "users", force: :cascade do |t|
-    t.string   "email",           null: false
-    t.string   "password_digest", null: false
-    t.datetime "created_at"
-    t.datetime "updated_at"
-    t.string   "uid"
-    t.string   "provider"
+  create_table 'users', force: :cascade do |t|
+    t.string   'email',           null: false
+    t.string   'password_digest', null: false
+    t.datetime 'created_at'
+    t.datetime 'updated_at'
+    t.string   'uid'
+    t.string   'provider'
   end
 
-  add_index "users", ["provider", "uid"], name: "index_users_on_provider_and_uid", unique: true, using: :btree
-
+  add_index 'users', %w[provider uid], name: 'index_users_on_provider_and_uid', unique: true, using: :btree
 end

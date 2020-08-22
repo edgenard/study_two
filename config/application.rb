@@ -1,6 +1,8 @@
-require File.expand_path('../boot', __FILE__)
+# frozen_string_literal: true
 
-require 'rails/all'
+require File.expand_path("boot", __dir__)
+
+require "rails/all"
 
 # Require the gems listed in Gemfile, including any gems
 # you've limited to :test, :development, or :production.
@@ -19,15 +21,14 @@ module StudyTwo
     # The default locale is :en and all translations from config/locales/*.rb,yml are auto loaded.
     # config.i18n.load_path += Dir[Rails.root.join('my', 'locales', '*.{rb,yml}').to_s]
     # config.i18n.default_locale = :de
-    
-    
+
     config.paperclip_defaults = {
-    :storage => :s3,
-    :s3_credentials => {
-      :bucket => ENV["s3_bucket"],
-      :access_key_id => ENV["s3_access_key_id"],
-      :secret_access_key => ENV["s3_secret_access_key"]
+      storage: :s3,
+      s3_credentials: {
+        bucket: ENV["s3_bucket"],
+        access_key_id: ENV["s3_access_key_id"],
+        secret_access_key: ENV["s3_secret_access_key"]
+      }
     }
-  }
   end
 end
